@@ -27,7 +27,7 @@ export default function Article({location}) {
         role="button"
         aria-label="open sidebar"
         on="tap:header-sidebar.toggle"
-        tabindex="0"
+        tabIndex="0"
         className="ampstart-navbar-trigger pr2"
       >
         ☰
@@ -53,7 +53,7 @@ export default function Article({location}) {
           role="button"
           aria-label="close sidebar"
           on="tap:header-sidebar.toggle"
-          tabindex="0"
+          tabIndex="0"
           className="ampstart-navbar-trigger items-start"
         >
           ✕
@@ -215,7 +215,7 @@ export default function Article({location}) {
           <address className="ampstart-byline clearfix mb4 px3 h5">
             <time
               className="ampstart-byline-pubdate block bold my1"
-              datetime="2016-12-13"
+              dateTime="2016-12-13"
               >December 13, 2016</time
             >
           </address>
@@ -361,7 +361,7 @@ export default function Article({location}) {
                     placeholder="Email"
                   />
                   <label
-                    for="emailid"
+                    htmlFor="emailid"
                     className="absolute top-0 right-0 bottom-0 left-0"
                     aria-hidden="true"
                     >Email</label
