@@ -1,15 +1,20 @@
-import React,{Fragment,useEffect,useRef} from 'react'
+import React,{Fragment,useEffect,useState} from 'react'
 import Head from 'next/head'
 import styles from './index.module.scss'
 import PlayerWidget from '../../components/PlayerWidget'
 import { ArticleHeader } from '../../components/Header'
-export default function Article() {
 
 
+export default function Article({location}) {
+      
 
     return (
         <Fragment>
-            <Head></Head>
+            <Head>
+                <meta charSet="utf-8"/>
+                <title>Hello, AMPs</title>
+                <link rel="canonical" href={location}/>
+            </Head>
             <Fragment>
                 <ArticleHeader/>  
                 <main className={styles.main}>
@@ -32,3 +37,15 @@ export default function Article() {
         </Fragment>
     )
 }
+
+export async function getServerSideProps(context) {
+    // Fetch data from external API
+    
+    const { req, query, res, asPath, pathname } = context;
+    if (req) {
+      var host = req.headers.referer // will give you localhost:3000
+    }
+    // Pass data to the page via props
+
+    return { props: {location : host || ""} }
+  }

@@ -40,21 +40,20 @@ export default function PlayerWidget() {
     const playerDo = (containerId, callback) => {
         const player = document.querySelector(`#${containerId} amp-story-player`);
         if (player.isReady) {
-        console.log("player is ready");
-        callback(player);
-        } else {
-        console.log("player is not ready");
-        player.addEventListener("ready", () => {
+            console.log("player is ready");
             callback(player);
-        });
+        } else {
+            console.log("player is not ready");
+            player.addEventListener("ready", () => {
+                callback(player);
+            });
         }
     };
     
     const loadPlayer = (playerRef) => () => {
-        console.log("player", playerRef.current);
+
         if (window.AmpStoryPlayer) {
-        console.log("window");
-        new window.AmpStoryPlayer(window, playerRef.current).load();
+            new window.AmpStoryPlayer(window, playerRef.current).load();
         }
     
         playerRef.current.add([
@@ -70,8 +69,7 @@ export default function PlayerWidget() {
 
     useEffect(()=>{
         playerDo("player-widget", (player) => {
-            console.log("show", player);
-
+            
             player.show(
               "https://stories.marmiton.org/menu-de-la-semaine-4-10-janvier-dE3b4YkgP/"
             );
