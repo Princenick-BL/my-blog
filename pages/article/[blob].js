@@ -24,6 +24,21 @@ export default function Article({location}) {
                       <div className={styles.inArticleWidget}>
                         <PlayerWidget/>
                       </div>
+                      <br></br>
+                      <br></br>
+                      <br></br>
+                      <br></br>
+
+                      kcdls,
+                      fvedlk,f 
+                      vf,
+                      <br></br>
+                      <br></br>
+
+                      <br></br>
+                      <br></br>
+                      <br></br>
+
                     </section>
                     <aside>
                        <PlayerWidget/>
