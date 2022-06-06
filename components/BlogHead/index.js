@@ -480,6 +480,7 @@ export default function BlogHead() {
         }
         .mb1 {
             margin-bottom: 0.5rem;
+
         }
         .ml1,
         .mx1 {
@@ -1844,6 +1845,9 @@ export default function BlogHead() {
 
         .br5{
             border-radius : 5px;
+        }
+        .fsh1{
+            font-size : 2.5rem;
         }
       
       `}

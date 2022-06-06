@@ -48,10 +48,18 @@ export default function Article({location}) {
         ]
     }
       
+    useEffect(()=>{
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-230778709-1');
+    },[])
 
     return (
         <Fragment>
             <Head>
+                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-230778709-1"></script>
                 <meta charSet="utf-8"/>
                 <title>Hello, AMPs</title>
                 <link rel="canonical" href={location}/>
@@ -70,7 +78,7 @@ export default function Article({location}) {
                     <article className="recipe-article">
                         <header>
                             <span className="ampstart-subtitle block px3 pt2 mb2">{article?.meta?.category}</span>
-                            <h1 className="mb1 px3">{article?.meta?.title}</h1>
+                            <h1 className="mb1 px3 fsh1">{article?.meta?.title}</h1>
                             <br></br>
                             <address className="ampstart-byline clearfix mb4 px3 h5">
                                 <time
