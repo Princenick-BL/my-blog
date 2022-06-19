@@ -5,7 +5,7 @@ import styles from './index.module.scss'
 export default function ArticlePreview({url,img,test,category,odd}) {
 
   return (
-      <a target={"_blank"} href={url}>
+      <a target={"_blank"} rel="noreferrer" href={url}>
         <div className={styles.card+ " "+ (odd ? styles.odd : styles.notOdd)}>
             <div className={styles.img}>
                 <Image
