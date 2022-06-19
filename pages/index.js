@@ -31,18 +31,21 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.articles}>
           <h3> <FireOutlined /> Top articles</h3>
-          {articles && articles?.map((article,index)=>{
-            return(
-              <ArticlePreview
-                key={index}
-                odd = {index%2 === 0}
-                img={article?.poster}
-                category={article?.category}
-                test={article?.title}
-              />
+          <div className={styles.articleList}>
+            {articles && articles?.map((article,index)=>{
+              return(
+                <ArticlePreview
+                  key={index}
+                  odd = {index%2 === 0}
+                  img={article?.poster}
+                  category={article?.category}
+                  test={article?.title}
+                />
 
-            )
-          })}
+              )
+            })}
+
+          </div>
           <div className={styles.readMore}>
             <div></div>
             <div className={styles.readmoreBlock}>

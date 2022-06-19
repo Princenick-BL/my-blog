@@ -13,6 +13,14 @@
 
   .articles{
     width: 100%;
+    .articleList{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      a{
+        width: 100%;
+      }
+    }
     .readMore{
       display: flex;
       justify-content: space-between;
@@ -35,6 +43,9 @@
       display: flex;
       max-width: 100%;
       overflow-x: scroll;
+    }
+    .storyList:first-child{
+      margin-left: -10px;
     }
     .storyList::-webkit-scrollbar-track {
       border-radius: 10px;
