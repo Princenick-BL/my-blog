@@ -1,8 +1,25 @@
+import React,{useState,useEffect}  from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
+import ArticlePreview from '../components/ArticlePreview'
+import StoryPreview from '../components/StoryPreview'
+import { getTopArticle } from '../services/articles'
+import {
+  FireOutlined,
+  TabletOutlined
+} from '@ant-design/icons';
 
 export default function Home() {
+
+  const [articles,setArticles] =  useState([])
+  useEffect(()=>{
+    (async ()=>{
+      const res = await getTopArticle()
+      setArticles(res.data)
+    })();
+  },[])
+
   return (
     <div className={styles.container}>
       <Head>
@@ -12,43 +29,38 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <div className={styles.articles}>
+          <h3> <FireOutlined /> Top articles</h3>
+          {articles && articles?.map((article,index)=>{
+            return(
+              <ArticlePreview
+                odd = {index%2 === 0}
+                img={article?.poster}
+                category={article?.category}
+                test={article?.title}
+              />
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+            )
+          })}
+          <div className={styles.readMore}>
+            <div></div>
+            <div className={styles.readmoreBlock}>
+              <a href='#'>{"Read more >"}</a>
+            </div>
+          </div>
+        </div>
+        <div className={styles.stories}>
+          <h3><TabletOutlined/> Stories</h3>
+          <div className={styles.storyList}>
+            {[0,1,2,3,4,5,6].map((story)=>{
+              return(
+                <StoryPreview
+                  title={"Hello world kdflzj jhfekjl"}
+                  img={"https://picsum.photos/1024/700"}
+                />
+              )
+            })}
+          </div>
         </div>
       </main>
 

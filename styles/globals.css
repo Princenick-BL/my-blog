@@ -34,3 +34,10 @@ a {
 #__next{
   height: 100%;
 }
+
+:root {
+  --nc-header-shadow : rgba(60,64,67,0.3);
+  --color-primary-light : #fdde77;
+  --color-secondary-light : #102770;
+  --text-color-primary : #2C2D31;
+}
