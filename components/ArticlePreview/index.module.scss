@@ -1,5 +1,5 @@
 .card{
-    box-shadow: #32326926 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    box-shadow: 0.25rem 0.25rem 1.25rem rgba(66,95,255,.1);
     display: flex;
     width: 100%;
     min-width: 100%;
@@ -42,9 +42,14 @@
     }
 }
 .odd{
-    border: 1px solid var(--color-primary-light);
+    color: #fff;
+    background: rgb(7,155,238);
+    background: linear-gradient(97deg, rgba(7,155,238,1) 20%, rgba(8,41,190,1) 70%, rgba(3,24,99,1) 100%);
+    h3{
+        color: #fff !important;
+    }
 }
 
 .notOdd{
-    border: 1px solid #ccc;
+    //border: 1px solid #ccc;
 }

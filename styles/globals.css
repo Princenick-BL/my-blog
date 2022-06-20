@@ -37,7 +37,7 @@ a {
 
 :root {
   --nc-header-shadow : rgba(60,64,67,0.3);
-  --color-primary-light : #fdde77;
+  --color-primary-light : rgba(8,41,190,1);
   --color-secondary-light : #102770;
   --text-color-primary : #2C2D31;
 }

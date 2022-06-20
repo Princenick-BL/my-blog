@@ -30,7 +30,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.articles}>
-          <h3> <FireOutlined /> Top articles</h3>
+          <h3 className={styles.h3}> <FireOutlined /> Top articles</h3>
           <div className={styles.articleList}>
             {articles && articles?.map((article,index)=>{
               return(
@@ -54,7 +54,7 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.stories}>
-          <h3><TabletOutlined/> Stories</h3>
+          <h3 className={styles.h3}><TabletOutlined/> Stories</h3>
           <div className={styles.storyList}>
             {[0,1,2,3,4,5,6].map((story,index)=>{
               return(
