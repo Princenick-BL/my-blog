@@ -1833,7 +1833,6 @@ export default function BlogHead() {
         main .ampstart-social-follow {
             margin-left: auto;
             margin-right: auto;
-            width: 315px;
         }
         main .ampstart-social-follow li {
             transform: scale(1.8);

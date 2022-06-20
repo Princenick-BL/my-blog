@@ -21,7 +21,7 @@ export function ArticleHeader(){
                 ☰
             </div>
             <amp-img
-                src="../img/blog/logo.png"
+                src="https://picsum.photos/50/50"
                 width="100"
                 height="61.3"
                 layout="fixed"

@@ -5,7 +5,7 @@ export default function StoryPreview({url,img,title,logo}) {
   return (
     <div className={styles.storyPreview} style={{backgroundImage:`url(${img})`}}>
         <div className={styles.title}>{title}</div>
-        <div className={styles.logo}></div>
+        <div className={styles.logo} style={{backgroundImage:`url(${logo})`}}></div>
     </div>
   )
 }

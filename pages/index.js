@@ -12,6 +12,7 @@ import {
 import BlogHead from '../components/BlogHead'
 import {ArticleHeader} from '../components/Header'
 import Menu from '../components/Menu'
+import Loading from '../Loading'
 
 export default function Home() {
 
@@ -37,7 +38,7 @@ export default function Home() {
         <div className={styles.articles}>
           <h3 className={styles.h3}> <FireOutlined /> Top articles</h3>
           <div className={styles.articleList}>
-            {articles && articles?.map((article,index)=>{
+            {articles ? articles?.map((article,index)=>{
               return(
                 <ArticlePreview
                   key={index}
@@ -48,7 +49,9 @@ export default function Home() {
                 />
 
               )
-            })}
+            }):(
+              <Loading/>
+            )}
 
           </div>
           <div className={styles.readMore}>
@@ -68,6 +71,7 @@ export default function Home() {
                   key={index}
                   title={"Hello world kdflzj jhfekjl"}
                   img={"https://picsum.photos/1024/700"}
+                  logo={"https://picsum.photos/50/50"}
                 />
               )
             })}
