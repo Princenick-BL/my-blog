@@ -7,7 +7,9 @@ export default function BlogHead() {
     <meta name="amp-google-client-id-api" content="googleanalytics" />
 
     <script async="" src="https://cdn.ampproject.org/v0.js"></script>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet"/>
     <style amp-boilerplate="">{`
         body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -1847,6 +1849,20 @@ export default function BlogHead() {
         }
         .fsh1{
             font-size : 2.5rem;
+        }
+        .webpage-articleHeader{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .webpage-articleHeader .webpage-navMenu{
+            position: absolute;
+            left: 1rem;
+        }
+        .webpage-articleHeader .webpage-logo{
+            font-size: 1.5rem;
+            font-family: Dancing Script ,cursive;
         }
       
       `}

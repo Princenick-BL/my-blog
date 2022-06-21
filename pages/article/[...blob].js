@@ -6,47 +6,50 @@ import { ArticleHeader } from '../../components/Header'
 import Menu from '../../components/Menu'
 import BlogHead from '../../components/BlogHead'
 import { getSection } from '../../utils/article.utils'
+import axios from 'axios'
+import { config as endpoint } from '../../constants'
 
 export const config = { amp: true };
 
 
-export default function Article({location}) {
+export default function Article({location,article}) {
 
-    const article = {
-        meta : {
-            category : "FOOD",
-            title : "Ginger Strawberry Spritzer",
-            updatedAt : "December 13, 2016",
-            poster : "https://picsum.photos/1024/700"
-        },
-        sections : [
-            {
-                type : "TEXT_BLOCK",
-                meta : {
 
-                },
-                content : `
-                    Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
-                    quis gravida magna mi a libero. Fusce vulputate eleifend sapien.
-                    Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.
-                    Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit
-                    fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et
-                    ultrices posuere.`
+    // const article = {
+    //     meta : {
+    //         category : "FOOD",
+    //         title : "Ginger Strawberry Spritzer",
+    //         updatedAt : "December 13, 2016",
+    //         poster : "https://picsum.photos/1024/700"
+    //     },
+    //     sections : [
+    //         {
+    //             type : "TEXT_BLOCK",
+    //             meta : {
 
-            },
-            {
-                type : "IMAGE_BLOCK",
-                meta : {
-                    width : 1280,
-                    height : 700,
-                    alt :" Hello world and forstg nflksjl "
-                },
-                mediaUrl : `https://picsum.photos/1024/700`
+    //             },
+    //             content : `
+    //                 Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+    //                 quis gravida magna mi a libero. Fusce vulputate eleifend sapien.
+    //                 Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.
+    //                 Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit
+    //                 fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et
+    //                 ultrices posuere.`
 
-            }
+    //         },
+    //         {
+    //             type : "IMAGE_BLOCK",
+    //             meta : {
+    //                 width : 1280,
+    //                 height : 700,
+    //                 alt :" Hello world and forstg nflksjl "
+    //             },
+    //             mediaUrl : `https://picsum.photos/1024/700`
 
-        ]
-    }
+    //         }
+
+    //     ]
+    // }
       
     useEffect(()=>{
         window.dataLayer = window.dataLayer || [];
@@ -54,6 +57,7 @@ export default function Article({location}) {
         gtag('js', new Date());
 
         gtag('config', 'UA-230778709-1');
+
     },[])
 
     return (
@@ -77,17 +81,17 @@ export default function Article({location}) {
 
                     <article className="recipe-article">
                         <header>
-                            <span className="ampstart-subtitle block px3 pt2 mb2">{article?.meta?.category}</span>
-                            <h1 className="mb1 px3 fsh1">{article?.meta?.title}</h1>
+                            <span className="ampstart-subtitle block px3 pt2 mb2">{article?.category}</span>
+                            <h1 className="mb1 px3 fsh1">{article?.title}</h1>
                             <br></br>
                             <address className="ampstart-byline clearfix mb4 px3 h5">
                                 <time
                                     className="ampstart-byline-pubdate block bold my1"
                                     dateTime="2016-12-13"
-                                >{`Updated at : ${article?.meta?.updatedAt}`}</time>
+                                >{`Updated at : ${article?.updatedAt}`}</time>
                             </address>
                             <amp-img
-                                src={article?.meta?.poster}
+                                src={article?.poster}
                                 width="1280"
                                 height="853"
                                 layout="responsive"
@@ -99,7 +103,7 @@ export default function Article({location}) {
                             return getSection(section)
                         })}
                         
-                        <section className="px3 mb4">
+                        {/* <section className="px3 mb4">
                             <h2 className="mb2">Ingredients</h2>
                             <span className="ampstart-hint block mb3">SERVINGS 4</span>
                             <ul className="mb4">
@@ -397,7 +401,7 @@ export default function Article({location}) {
                                 </li>
                                 </ul>
                             </section>
-                        </section>
+                        </section> */}
                     </article>
                 </main>
 
@@ -427,10 +431,28 @@ export async function getServerSideProps(context) {
     // Fetch data from external API
     
     const { req, query, res, asPath, pathname } = context;
+    const {blob}  = query
+    const articleId = blob[0]
+
     if (req) {
       var host = req.headers.referer // will give you localhost:3000
     }
+
+    const result = await axios.get(`${endpoint.API_ENDPOINT}/article/${articleId}`)
+
+    if(result?.data?.success){
+        return { 
+            props: {
+                location : host || "",
+                article : result.data?.data
+            } 
+        }
+    }
     // Pass data to the page via props
 
-    return { props: {location : host || ""} }
+    return { 
+        props: {
+            location : host || "",
+        } 
+    }
   }

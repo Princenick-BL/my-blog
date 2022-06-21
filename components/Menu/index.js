@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 export default function Menu() {
     return (
@@ -22,6 +23,11 @@ export default function Menu() {
             <br></br>
             <nav className="ampstart-sidebar-nav ampstart-nav">
                 <ul className="list-reset m0 p0 ampstart-label">
+                    <li className="ampstart-nav-item">
+                        <Link href={"/"}>
+                            <a className="ampstart-nav-link">Home</a>
+                        </Link>
+                    </li>
                     <li className="ampstart-nav-item ampstart-nav-dropdown relative">
 
                         <amp-accordion
