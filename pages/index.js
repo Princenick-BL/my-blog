@@ -66,17 +66,20 @@ export default function Home() {
         <div className={styles.stories}>
           <h3 className={styles.h3}><TabletOutlined/> Top stories</h3>
           <div className={styles.storyList}>
-            {[0,1,2,3,4,5,6].map((story,index)=>{
+          {articles && articles.length >0 ? articles?.map((article,index)=>{
               return(
                 <StoryPreview
                   key={index}
-                  title={"Hello world kdflzj jhfekjl"}
-                  img={"https://picsum.photos/1024/700"}
+                  title={article?.title}
+                  img={article?.poster}
                   logo={"https://picsum.photos/50/50"}
-                  url={`/web-story/${index}/${story?.slug}`}
+                  url={`/web-story/${article?._id}/${article?.slug}`}
                 />
               )
-            })}
+            }):(
+              <Loading/>
+            )}
+            
           </div>
         </div>
       </main>
