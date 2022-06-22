@@ -1,3 +1,4 @@
+//import '../styles/quill.css'
 import '../styles/globals.scss'
 
 function MyApp({ Component, pageProps }) {

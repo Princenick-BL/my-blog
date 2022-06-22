@@ -75,7 +75,7 @@ export default function Article({location,article}) {
 
                 <Menu/>
 
-                <main id="content" role="main" className="">
+                <main id="content" role="main">
                     <br></br>
                     <br></br>
 
@@ -99,9 +99,12 @@ export default function Article({location,article}) {
                                 className="mb4 mx3 br5"
                             ></amp-img>
                         </header>
-                        {article?.sections?.map((section,index)=>{
-                            return getSection(section)
-                        })}
+                        <div  className="main">
+
+                            {article?.sections?.map((section,index)=>{
+                                return getSection(section)
+                            })}
+                        </div>
                         
                         {/* <section className="px3 mb4">
                             <h2 className="mb2">Ingredients</h2>
