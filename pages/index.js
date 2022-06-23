@@ -51,7 +51,7 @@ export default function Home() {
                 //   test={article?.title}
                 //   url={`/article/${article?._id}/${article?.slug}`}
                 // />
-                <Card style={{ width: '100%',marginTop:"1rem",marginBottom:"1rem" }}>
+                <Card key={index} style={{ width: '100%',marginTop:"1rem",marginBottom:"1rem" }}>
                   <Card.Img variant="top" src={article?.poster} />
                   <Card.Body>
                     <Card.Title>{article?.category}</Card.Title>
