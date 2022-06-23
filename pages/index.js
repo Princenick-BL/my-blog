@@ -13,6 +13,7 @@ import BlogHead from '../components/BlogHead'
 import {ArticleHeader} from '../components/Header'
 import Menu from '../components/Menu'
 import Loading from '../Loading'
+import Carroussel from '../components/Caroussel'
 
 export default function Home() {
 
@@ -36,6 +37,7 @@ export default function Home() {
         <ArticleHeader></ArticleHeader>
         <Menu></Menu>
         <div className={styles.articles}>
+          <Carroussel/>
           <h3 className={styles.h3}> <FireOutlined /> Top articles</h3>
           <div className={styles.articleList}>
             {articles && articles.length >0 ? articles?.map((article,index)=>{
