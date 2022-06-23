@@ -32,7 +32,7 @@ export default function Home() {
         poster-landscape-src="https://amp.dev/static/samples/img/story_dog2_landscape.jpg"
       >
         {/* <!-- A story consists of one or more pages. Each page is declared by an `amp-story-page` element. Pages are designed by layering videos, images and text. Here we have a page that uses two layers. One layer filling the available space with an image and one text layer that shows a heading. --> */}
-        <amp-story-page id="page-1" style = {{border: "1px solid red", borderRadius : "10px !important"}}>
+        <amp-story-page id="page-1" style = {{border: "1px solid red", borderRadius : "10px "}}>
           <amp-story-grid-layer template="fill">
             <amp-img
               src="https://amp.dev/static/samples/img/story_dog2.jpg"
@@ -48,7 +48,7 @@ export default function Home() {
         </amp-story-page>
 
         {/* <!-- Here we have a page consisting of a video which autoplays and loops. --> */}
-        <amp-story-page id="page-2"  style = {{border: "1px solid red", borderRadius : "10px !important"}}>
+        <amp-story-page id="page-2"  style = {{border: "1px solid red", borderRadius : "10px "}}>
           <amp-story-grid-layer template="fill">
             <amp-video
               autoplay=""
@@ -67,7 +67,7 @@ export default function Home() {
         </amp-story-page>
 
         {/* <!-- Pre-defined entry animations make it possible to create dynamic pages without videos. The length and initial delay can be customized using the `animate-in-duration` and `animate-in-delay` properties. The [animations sample](/documentation/examples/visual-effects/amp_story_animations/) shows all available animantions in action. --> */}
-        <amp-story-page id="animation-demo"  style = {{border: "1px solid red", borderRadius : "10px !important"}}>
+        <amp-story-page id="animation-demo"  style = {{border: "1px solid red", borderRadius : "10px "}}>
           <amp-story-grid-layer template="fill">
             <amp-img
               src="https://amp.dev/static/samples/img/story_dog4.jpg"
@@ -89,7 +89,7 @@ export default function Home() {
         </amp-story-page>
 
         {/* <!-- Stories can use predefined layouts to style the page. Here we're using the `thirds` template. For an overview about the available layouts take a look at the [layouts sample](/documentation/examples/style-layout/amp_story_layouts/). --> */}
-        <amp-story-page id="layout-demo"  style = {{border: "1px solid red", borderRadius : "10px !important"}}>
+        <amp-story-page id="layout-demo"  style = {{border: "1px solid red", borderRadius : "10px "}}>
           <amp-story-grid-layer template="thirds">
             <amp-img
               grid-area="upper-third"
