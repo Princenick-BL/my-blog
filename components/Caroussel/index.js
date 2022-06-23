@@ -2,16 +2,16 @@ import React from 'react'
 import styles from './index.module.scss'
 export default function Caroussel() {
     return (
-        <div class={styles.carouselWrapper}>
-            <div class={styles.carouselContainer}>
-                <div class={styles.carousel}>
-                    <div class={styles.imageOne}>
+        <div className={styles.carouselWrapper}>
+            <div className={styles.carouselContainer}>
+                <div className={styles.carousel}>
+                    <div className={styles.imageOne}>
                         Article 1
                     </div>
-                    <div class={styles.imageTwo}>
+                    <div className={styles.imageTwo}>
                         Article 2
                     </div>
-                    <div class={styles.imageThree}>
+                    <div className={styles.imageThree}>
                         Article 3
                     </div>
                 </div>
