@@ -14,7 +14,7 @@ import {ArticleHeader} from '../components/Header'
 import Menu from '../components/Menu'
 import Loading from '../Loading'
 import Carroussel from '../components/Caroussel'
-
+import {Card,Button} from 'react-bootstrap'
 export default function Home() {
 
   const [articles,setArticles] =  useState([])
@@ -38,19 +38,29 @@ export default function Home() {
         <Menu></Menu>
         <div className={styles.articles}>
           <Carroussel/>
+          
           <h3 className={styles.h3}> <FireOutlined /> Top articles</h3>
           <div className={styles.articleList}>
             {articles && articles.length >0 ? articles?.map((article,index)=>{
               return(
-                <ArticlePreview
-                  key={index}
-                  odd = {index%2 === 0}
-                  img={article?.poster}
-                  category={article?.category}
-                  test={article?.title}
-                  url={`/article/${article?._id}/${article?.slug}`}
-                />
-
+                // <ArticlePreview
+                //   key={index}
+                //   odd = {index%2 === 0}
+                //   img={article?.poster}
+                //   category={article?.category}
+                //   test={article?.title}
+                //   url={`/article/${article?._id}/${article?.slug}`}
+                // />
+                <Card style={{ width: '100%',marginTop:"1rem",marginBottom:"1rem" }}>
+                  <Card.Img variant="top" src={article?.poster} />
+                  <Card.Body>
+                    <Card.Title>{article?.category}</Card.Title>
+                    <Card.Text>
+                      {article?.title}
+                    </Card.Text>
+                    <Button variant="primary">Read full article</Button>
+                  </Card.Body>
+                </Card>
               )
             }):(
               <Loading/>
