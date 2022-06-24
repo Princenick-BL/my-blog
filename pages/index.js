@@ -58,7 +58,6 @@ export default function Home() {
                     <Card.Text>
                       {article?.title}
                     </Card.Text>
-                    <Button variant="primary">Read full article</Button>
                   </Card.Body>
                 </Card>
               )
