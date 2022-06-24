@@ -8,7 +8,7 @@ export default function ArticlePreview({url,img,title,category,odd}) {
   return (
       <a className={styles.cardBox} target={"_blank"} rel="noreferrer" href={url}>
         <Card style={{ width: '100%',marginTop:"1rem",marginBottom:"1rem" }}>
-          <Card.Img variant="top" src={img} />
+          <Card.Img className={styles.img} variant="top" src={img} />
           <Card.Body className={styles.body}>
             <Card.Title>{category}</Card.Title>
             <Card.Text>
