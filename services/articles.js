@@ -16,3 +16,11 @@ export const getTopArticle = async ()=>{
     }
     return null
 }
+
+export const getTopStories = async ()=>{
+    const res = await axios.get(`${config.API_ENDPOINT}/article/top`)
+    if(res){
+        return res.data
+    }
+    return null
+}

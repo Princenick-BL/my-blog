@@ -1,29 +1,21 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from './index.module.scss'
+import {Card,Button} from 'react-bootstrap'
 
-export default function ArticlePreview({url,img,test,category,odd}) {
+export default function ArticlePreview({url,img,title,category,odd}) {
 
   return (
       <a target={"_blank"} rel="noreferrer" href={url}>
-        <div className={styles.card+ " "+ (odd ? styles.odd : styles.notOdd)}>
-            <div className={styles.img}>
-                <Image
-                 src={img}
-                 width={100}
-                 height={100}
-                 layout='responsive'
-                 alt='img'/>
-            </div>
-            <div className={styles.descs}>
-                <div className={styles.textWithColor}>
-                  <div className={styles.color}></div>
-                  <span>{category}</span>
-                </div>
-                <h3>{test}</h3>
-                <span>{}</span>
-            </div>
-        </div>
+        <Card style={{ width: '100%',marginTop:"1rem",marginBottom:"1rem" }}>
+          <Card.Img variant="top" src={img} />
+          <Card.Body>
+            <Card.Title>{category}</Card.Title>
+            <Card.Text>
+              {title}
+            </Card.Text>
+          </Card.Body>
+        </Card>
       </a>
   )
 }
