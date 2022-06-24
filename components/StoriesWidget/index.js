@@ -17,7 +17,7 @@ export default function StoriesWidget() {
         <div className={styles.list}>
             {stories ? stories?.map((story,index)=>{
               return(
-                <div className={styles.outerCorner}>
+                <div key={index} className={styles.outerCorner}>
                     <div 
                         className={styles.innerConner}
                         style={{backgroundImage:`url(${story?.poster})`}}
