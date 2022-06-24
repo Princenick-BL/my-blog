@@ -1,3 +1,17 @@
+.cardBox{
+    max-width: 300px;
+    height: 100%;
+    margin: 1rem;
+    min-height: 352px;
+    @media screen and (max-width: 500px) {
+        max-width: 100%;
+        margin: 0;
+    }
+    .body{
+        min-height: 140px;
+    }
+}
+
 .card{
     // box-shadow: 0.25rem 0.25rem 1.25rem rgba(66,95,255,.1);
     display: flex;

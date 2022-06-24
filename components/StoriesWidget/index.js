@@ -17,12 +17,15 @@ export default function StoriesWidget() {
         <div className={styles.list}>
             {stories ? stories?.map((story,index)=>{
               return(
-                <div key={index} className={styles.outerCorner}>
-                    <div 
-                        className={styles.innerConner}
-                        style={{backgroundImage:`url(${story?.poster})`}}
-                    ></div>
-                </div>
+                  <a key={index} href={`/web-story/${story?._id}/${story?.slug}`} target={"_blank"}>
+                    <div  className={styles.outerCorner}>
+                        <div 
+                            className={styles.innerConner}
+                            style={{backgroundImage:`url(${story?.poster})`}}
+                        ></div>
+                    </div>
+
+                  </a>
                 
               )
             }):(

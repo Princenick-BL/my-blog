@@ -1863,6 +1863,10 @@ export default function BlogHead() {
             justify-content: center;
             align-items: center;
             width: 100%;
+            min-height : 40px;
+        }
+        .webpage-articleHeader h1{
+            margin : 0;
         }
         .webpage-articleHeader .webpage-navMenu{
             position: absolute;
