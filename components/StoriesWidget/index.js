@@ -17,7 +17,7 @@ export default function StoriesWidget() {
         <div className={styles.list}>
             {stories ? stories?.map((story,index)=>{
               return(
-                  <a key={index} href={`/web-story/${story?._id}/${story?.slug}`} target={"_blank"}>
+                  <a key={index} href={`/web-story/${story?._id}/${story?.slug}`} target={"_blank"} rel="noreferrer">
                     <div  className={styles.outerCorner}>
                         <div 
                             className={styles.innerConner}
