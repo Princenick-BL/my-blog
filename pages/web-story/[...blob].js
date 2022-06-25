@@ -19,7 +19,9 @@ export default function Home() {
           custom-element="amp-video"
           src="https://cdn.ampproject.org/v0/amp-video-0.1.js"
         />
-        
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"></link>
       </Head>
 
       <amp-story
@@ -32,19 +34,19 @@ export default function Home() {
         poster-landscape-src="https://amp.dev/static/samples/img/story_dog2_landscape.jpg"
       >
         {/* <!-- A story consists of one or more pages. Each page is declared by an `amp-story-page` element. Pages are designed by layering videos, images and text. Here we have a page that uses two layers. One layer filling the available space with an image and one text layer that shows a heading. --> */}
-        <amp-story-page id="page-1" style = {{ borderRadius : "10px ",width:"calc( 100% - 2px )"}}>
-          <amp-story-grid-layer template="fill">
-            <amp-img
-              src="https://amp.dev/static/samples/img/story_dog2.jpg"
+        <amp-story-page id="page-1" style = {{ borderRadius : "10px ",width:"calc( 100% - 2px )",backgroundColor:"#fff"}}>
+          <amp-story-grid-layer template="vertical">
+            <amp-img  id="image1"
+              animate-in="fade-in"
+              animate-in-delay="1s"
+              animate-in-duration="1s"
+              src="https://unsplash.it/720/320/?image=10"
               width="720"
-              height="500"
-              layout="fixed"
-              style = {{
-                position : "absolute",
-                maxWidth : "100%",
-                maxHeight:"60%",
-              }}
-            />
+              height="420"
+              layout="responsive"
+              alt="..."
+              style={{position : "absolute", top:"70px", margin:"5px",width:"calc( 100% - 10px )",borderRadius:"10px"}}
+            ></amp-img>
           </amp-story-grid-layer>
           <amp-story-grid-layer template="vertical">
             <svg 
@@ -70,22 +72,6 @@ export default function Home() {
           </amp-story-grid-layer>
 
           <amp-story-grid-layer template="vertical">
-            <div
-              style = {{
-                height: "40%",
-                position : "absolute",
-                maxWidth : "100%",
-                maxHeight:"60%",
-                bottom : 0,
-                backgroundColor : "#fff",
-                padding : "1rem",
-                paddingBottom : "60px"
-              }}
-            >
-              <h1 >Hello World</h1>
-            </div>
-          </amp-story-grid-layer>
-          <amp-story-grid-layer template="vertical">
             <svg 
               id="wave" 
               style={{
@@ -104,7 +90,7 @@ export default function Home() {
         </amp-story-page>
 
         {/* <!-- Here we have a page consisting of a video which autoplays and loops. --> */}
-        <amp-story-page id="page-2"  style = {{ borderRadius : "10px ",width:"calc( 100% - 2px )"}}>
+        <amp-story-page id="page-2"  style = {{ borderRadius : "10px ",width:"calc( 100% - 2px )",backgroundColor:"#fff"}}>
           <amp-story-grid-layer template="fill">
             <amp-video
               autoplay=""
@@ -120,10 +106,32 @@ export default function Home() {
               />
             </amp-video>
           </amp-story-grid-layer>
+          <amp-story-grid-layer template="vertical">
+            <div
+              style = {{
+                height: "40%",
+                position : "absolute",
+                maxWidth : "100%",
+                maxHeight:"60%",
+                bottom : 0,
+                backgroundColor : "#fff",
+                padding : "1rem",
+                paddingBottom : "60px"
+              }}
+            >
+              <h1
+                style={{
+                  fontFamily: "Dancing Script, cursive",
+                  fontSize : "1.5rem"
+                }}
+               >Hello World</h1>
+            </div>
+          </amp-story-grid-layer>
+        
         </amp-story-page>
 
         {/* <!-- Pre-defined entry animations make it possible to create dynamic pages without videos. The length and initial delay can be customized using the `animate-in-duration` and `animate-in-delay` properties. The [animations sample](/documentation/examples/visual-effects/amp_story_animations/) shows all available animantions in action. --> */}
-        <amp-story-page id="animation-demo"  style = {{ borderRadius : "10px ",width:"calc( 100% - 2px )"}}>
+        <amp-story-page id="animation-demo"  style = {{ borderRadius : "10px ",width:"calc( 100% - 2px )",backgroundColor:"#fff"}}>
           <amp-story-grid-layer template="fill">
             <amp-img
               src="https://amp.dev/static/samples/img/story_dog4.jpg"
@@ -144,7 +152,7 @@ export default function Home() {
           </amp-story-grid-layer>
         </amp-story-page>
 
-        <amp-story-page id="animation-demo"  style = {{ borderRadius : "10px ",width:"calc( 100% - 2px )"}}>
+        <amp-story-page id="animation-demo"  style = {{ borderRadius : "10px ",width:"calc( 100% - 2px )",backgroundColor:"#fff"}}>
           <amp-story-grid-layer template="fill">
             <amp-img
               src="https://amp.dev/static/samples/img/story_dog4.jpg"
@@ -165,7 +173,7 @@ export default function Home() {
           </amp-story-grid-layer>
         </amp-story-page>
 
-        <amp-story-page id="animation-demo"  style = {{ borderRadius : "10px ",width:"calc( 100% - 2px )"}}>
+        <amp-story-page id="animation-demo"  style = {{ borderRadius : "10px ",width:"calc( 100% - 2px )",backgroundColor:"#fff"}}>
           <amp-story-grid-layer template="fill">
             <amp-img
               src="https://amp.dev/static/samples/img/story_dog4.jpg"
@@ -186,7 +194,7 @@ export default function Home() {
           </amp-story-grid-layer>
         </amp-story-page>
 
-        <amp-story-page id="animation-demo"  style = {{ borderRadius : "10px ",width:"calc( 100% - 2px )"}}>
+        <amp-story-page id="animation-demo"  style = {{ borderRadius : "10px ",width:"calc( 100% - 2px )",backgroundColor:"#fff"}}>
           <amp-story-grid-layer template="fill">
             <amp-img
               src="https://amp.dev/static/samples/img/story_dog4.jpg"
@@ -207,7 +215,7 @@ export default function Home() {
           </amp-story-grid-layer>
         </amp-story-page>
 
-        <amp-story-page id="animation-demo"  style = {{ borderRadius : "10px ",width:"calc( 100% - 2px )"}}>
+        <amp-story-page id="animation-demo"  style = {{ borderRadius : "10px ",width:"calc( 100% - 2px )",backgroundColor:"#fff"}}>
           <amp-story-grid-layer template="fill">
             <amp-img
               src="https://amp.dev/static/samples/img/story_dog4.jpg"
@@ -227,7 +235,7 @@ export default function Home() {
             </h2>
           </amp-story-grid-layer>
         </amp-story-page>
-        <amp-story-page id="animation-demo"  style = {{ borderRadius : "10px ",width:"calc( 100% - 2px )"}}>
+        <amp-story-page id="animation-demo"  style = {{ borderRadius : "10px ",width:"calc( 100% - 2px )",backgroundColor:"#fff"}}>
           <amp-story-grid-layer template="fill">
             <amp-img
               src="https://amp.dev/static/samples/img/story_dog4.jpg"
@@ -249,7 +257,7 @@ export default function Home() {
         </amp-story-page>mon
 
         {/* <!-- Stories can use predefined layouts to style the page. Here we're using the `thirds` template. For an overview about the available layouts take a look at the [layouts sample](/documentation/examples/style-layout/amp_story_layouts/). --> */}
-        <amp-story-page id="layout-demo"  style = {{ borderRadius : "10px ",width:"calc( 100% - 2px )"}}>
+        <amp-story-page id="layout-demo"  style = {{ borderRadius : "10px ",width:"calc( 100% - 2px )",backgroundColor:"#fff"}}>
           <amp-story-grid-layer template="thirds">
             <amp-img
               grid-area="upper-third"
