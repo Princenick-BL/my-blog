@@ -47,7 +47,7 @@ export default function Home() {
         <Menu/>
         <div className={styles.articles}>
           <br></br>
-          <input className={styles.searchInput} type={"search"} placeholder='Search ...'/>
+          <input className={"searchInput"} type={"search"} placeholder='Search ...'/>
           <br></br>
           <br></br>
           <StoriesWidget/>
