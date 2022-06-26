@@ -42,7 +42,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        {/* <BlogHead></BlogHead> */}
+        <BlogHead></BlogHead>
         <ArticleHeader></ArticleHeader>
         <Menu></Menu>
         <div className={styles.articles}>
