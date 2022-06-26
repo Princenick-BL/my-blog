@@ -9,7 +9,7 @@ export const getArticle = async ()=>{
     return null
 }
 
-export const getTopArticle = async ()=>{
+export const getTopArticles = async ()=>{
     const res = await axios.get(`${config.API_ENDPOINT}/article/top`)
     if(res){
         return res.data
@@ -17,10 +17,3 @@ export const getTopArticle = async ()=>{
     return null
 }
 
-export const getTopStories = async ()=>{
-    const res = await axios.get(`${config.API_ENDPOINT}/article/top`)
-    if(res){
-        return res.data
-    }
-    return null
-}
