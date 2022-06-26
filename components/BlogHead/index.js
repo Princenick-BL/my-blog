@@ -2696,7 +2696,6 @@ export default function BlogHead() {
                     border: 1px solid #aaa;
                     width: 100%;
                     padding: 5px 1rem;
-                    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
                 }
 
             `}
