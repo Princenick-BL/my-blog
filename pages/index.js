@@ -46,9 +46,9 @@ export default function Home() {
 
       <Fragment>
 
-        <ArticleHeader/>
+        {/* <ArticleHeader/>
 
-        <Menu/>
+        <Menu/> */}
         
         <main className={styles.main}>
           <div className={styles.articles}>
