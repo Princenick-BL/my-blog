@@ -33,9 +33,9 @@
       margin: 1rem;
       max-width: 40%;
       @media (max-width: 500px) {
-          width: 90vw;
-          min-width: 90vw;
-          height: calc(90vw * 16 / 9);
+        width: 90vw;
+        min-width: 90vw;
+        height: calc(90vw * 16 / 9);
       }
     }
 
