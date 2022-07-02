@@ -29,8 +29,8 @@ export default class ArticlePreview extends Component {
       <div className={styles.card}>
         <div>
           <Image
-            width={300}
-            height={300*9/16}
+            width={700}
+            height={700*9/16}
             src={this.props.img}
           />
         </div>
