@@ -33,6 +33,7 @@ a {
 
 * {
   box-sizing: border-box;
+  line-height: 1.5 !important;
 }
 #__next{
   height: 100%;
@@ -41,7 +42,7 @@ a {
 :root {
   --nc-header-shadow : rgba(60,64,67,0.3);
   --color-primary-light : rgba(8,41,190,1);
-  --color-secondary-light : #102770;
+  --color-secondary-light : #fff;
   --text-color-primary : #2C2D31;
   --color1: rgba(7,155,238,1);
   --color2: rgba(8,41,190,1);

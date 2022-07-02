@@ -1,6 +1,6 @@
 // import React from 'react'
 // import Image from 'next/image'
-// import styles from './index.module.scss'
+import styles from './index.module.scss'
 // import {Card,Button} from 'react-bootstrap'
 
 // export default function ArticlePreview({url,img,title,category,odd}) {
@@ -26,13 +26,22 @@ import Image from 'next/image'
 export default class ArticlePreview extends Component {
   render() {
     return (
-      <div>
+      <div className={styles.card}>
         <div>
           <Image
             width={300}
             height={300*9/16}
             src={this.props.img}
           />
+        </div>
+        <div className={styles.meta}>
+          <h1>
+            {this.props.title}
+          </h1>
+          <div className={styles.foot}>
+            <div className={styles.cat}>{this.props.category}</div>
+            <div className={styles.date}>{ new Date(this.props.updatedAt).toLocaleDateString()}</div>
+          </div>
         </div>
       </div>
     )
