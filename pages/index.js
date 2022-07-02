@@ -72,7 +72,7 @@ export default function Home() {
               }):(
                 <Loading/>
               )}
-              <div style={{width: "360px", height: "600px"}}>
+              <div className={styles.player}>
                 <PlayerWidget/>
               </div>
             </div>

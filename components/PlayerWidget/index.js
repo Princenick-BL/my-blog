@@ -59,7 +59,7 @@ export default function PlayerWidget() {
         playerRef.current.add([
         {
             href:
-            "https://stories.marmiton.org/menu-de-la-semaine-4-10-janvier-dE3b4YkgP/"
+            "https://preview.amp.dev/documentation/examples/introduction/stories_in_amp/"
         }
         ]);
     };
@@ -71,7 +71,7 @@ export default function PlayerWidget() {
         playerDo("player-widget", (player) => {
             
             player.show(
-              "https://stories.marmiton.org/menu-de-la-semaine-4-10-janvier-dE3b4YkgP/"
+              "https://preview.amp.dev/documentation/examples/introduction/stories_in_amp/"
             );
             player.play();
             player.unmute();
@@ -87,7 +87,7 @@ export default function PlayerWidget() {
                 style={{ width: "300px", height: "533.333333333px" }}
                 ref={playerRef}
             >
-                <a href="https://stories.marmiton.org/menu-de-la-semaine-4-10-janvier-dE3b4YkgP/"></a>
+                <a href="https://preview.amp.dev/documentation/examples/introduction/stories_in_amp/"></a>
             </amp-story-player>
         </div>
     )
