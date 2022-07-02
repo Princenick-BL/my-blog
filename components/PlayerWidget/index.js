@@ -17,7 +17,14 @@ export default function PlayerWidget() {
             onClick={(e)=>{setShow(true)}}
             style={{backgroundImage : `url(${"https://picsum.photos/360/370"})`}}
         > 
-            <div className={styles.webStoryIcon}></div>
+            <div className={styles.calc}>
+                <div className={styles.webStoryIcon}></div>
+                <div className={styles.title}>
+                    <p>
+                        Laborum non mollit quis commodo nisi nisi occaecat ea quis nulla quis nostrud.
+                    </p>
+                </div>
+            </div>
         </div>
         {show &&
             <div className={styles.overlay}>

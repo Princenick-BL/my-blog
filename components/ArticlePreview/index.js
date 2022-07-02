@@ -26,24 +26,26 @@ import Image from 'next/image'
 export default class ArticlePreview extends Component {
   render() {
     return (
-      <div className={styles.card}>
-        <div>
-          <Image
-            width={700}
-            height={700*9/16}
-            src={this.props.img}
-          />
-        </div>
-        <div className={styles.meta}>
-          <h1>
-            {this.props.title}
-          </h1>
-          <div className={styles.foot}>
-            <div className={styles.cat}>{this.props.category}</div>
-            <div className={styles.date}>{ new Date(this.props.updatedAt).toLocaleDateString()}</div>
+      <a className={styles.card} target={"_blank"} rel="noreferrer" href={this.props.url}>
+        <div >
+          <div>
+            <Image
+              width={700}
+              height={700*9/16}
+              src={this.props.img}
+            />
+          </div>
+          <div className={styles.meta}>
+            <h1>
+              {this.props.title}
+            </h1>
+            <div className={styles.foot}>
+              <div className={styles.cat}>{this.props.category}</div>
+              <div className={styles.date}>{ new Date(this.props.updatedAt).toLocaleDateString()}</div>
+            </div>
           </div>
         </div>
-      </div>
+      </a>
     )
   }
 }
