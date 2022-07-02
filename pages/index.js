@@ -12,7 +12,7 @@ import {
 } from '@ant-design/icons';
 import BlogHead from '../components/BlogHead'
 import {ArticleHeader} from '../components/Header'
-import Menu from '../components/Menu'
+import {HomeMenu as Menu} from '../components/Menu'
 import Loading from '../Loading'
 import StoriesWidget from '../components/StoriesWidget'
 import PlayerWidget from '../components/PlayerWidget'
@@ -21,6 +21,9 @@ export default function Home() {
 
   const [articles,setArticles] =  useState([])
   const [stories,setStories] =  useState([])
+  const [stories1,setStories1] =  useState([])
+  const [stories2,setStories2] =  useState([])
+
 
   useEffect(()=>{
     (async ()=>{
@@ -31,6 +34,12 @@ export default function Home() {
     })();
   },[])
 
+  useEffect(()=>{
+    var first = stories.slice(0, 2);
+    var second = stories.slice(3);
+    setStories1(first)
+    setStories2(second)
+  },[stories])
   
 
   return (
@@ -42,14 +51,14 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
           
         </Head>
-        {/* <BlogHead/> */}
+
+        <Menu/>
+
         <main className={styles.main}>
-          {/* <ArticleHeader/> */}
-          <Menu/>
           <div className={styles.articles}>
-            <br></br>
+            {/* <br></br>
             <input className={"searchInput"} type={"search"} placeholder='Search ...'/>
-            <br></br>
+            <br></br> */}
             <br></br>
             <StoriesWidget/>
             <br></br>
@@ -72,9 +81,30 @@ export default function Home() {
               }):(
                 <Loading/>
               )}
-              <div className={styles.player}>
-                <PlayerWidget/>
-              </div>
+              {stories1 ? (
+                <>
+                {stories1.length > 0 && stories1?.map((storie,index)=>{
+                  return(
+                    <div  
+                      key={index}
+                      className={styles.player}>
+                      <PlayerWidget
+                        title={"Consectetur aute non incididunt esse Lorem dolore mollit occaecat elit."}
+                        img={storie?.poster || "https://picsum.photos/360/370"}
+                        logo={"https://picsum.photos/50/50"}
+                        url={`/web-story/${storie?._id}/${storie?.slug}`}
+                        category={storie?.category}
+                      />
+                    </div>
+                  )
+                })
+                }
+                </>
+              ) :(
+                  <Loading/>
+              )}
+              
+             
             </div>
             <div className={styles.readMore}>
               <div></div>
@@ -85,19 +115,26 @@ export default function Home() {
           </div>
           <br></br>
           <div className={styles.stories}>
-            <h3 className={styles.h3}><TabletOutlined/> Top stories</h3>
+            {(stories && stories.length > 1 ) &&
+              <h3 className={styles.h3}><TabletOutlined/> Top stories</h3>
+            }
             <div className={styles.storyList}>
-            {stories && stories.length >0 ? stories?.map((storie,index)=>{
+            {stories2 ? (
+              <>
+              {stories2.length > 0 && stories2?.map((storie,index)=>{
                 return(
-                  <StoryPreview
-                    key={index}
-                    title={storie?.title}
-                    img={storie?.poster}
-                    logo={"https://picsum.photos/50/50"}
-                    url={`/web-story/${storie?._id}/${storie?.slug}`}
-                  />
+                    <StoryPreview
+                      key={index}
+                      title={storie?.title}
+                      img={storie?.poster}
+                      logo={"https://picsum.photos/50/50"}
+                      url={`/web-story/${storie?._id}/${storie?.slug}`}
+                    />
                 )
-              }):(
+              })
+              }
+              </>
+            ) :(
                 <Loading/>
               )}
               
