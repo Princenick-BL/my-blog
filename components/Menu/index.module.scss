@@ -29,14 +29,15 @@
         }
     }
     .active{
-       
+        display: flex;
         animation: openModal 0.4s ease-out forwards;
     }
     .innactive{
         display: none;
-        animation: closeModal 0.4s ease-out forwards;
+        animation: closeModal 0.4s ease-in forwards;
     }
     .side{
+        display: none;
         position: fixed;
         width: 60vw;
         height: 100vh;
@@ -69,12 +70,12 @@
         
     }
     @keyframes openModal {
-        0% { transform: translateY(-100%); }
-        100% { transform: translateY(0);   }
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(0);   }
     }
     
     @keyframes closeModal {
-        0% { transform: translateY(0); }
-        100% { transform: translateY(-100%);}
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-100%);}
     }
 }

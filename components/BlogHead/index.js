@@ -430,7 +430,7 @@ export default function BlogHead() {
                 }
                 .my1 {
                     margin-top: 0.5rem;
-                    margin-bottom: 0.5rem;
+                    margin-bottom: 2rem;
                 }
                 .m2 {
                     margin: 1rem;
@@ -1601,7 +1601,7 @@ export default function BlogHead() {
                     background-color: #fff;
                     color: #000;
                     z-index: 999;
-                    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+                    border-bottom: 1px solid rgba(243, 243, 243, 0.9529411765);
                 }
                 .ampstart-headerbar + :not(amp-sidebar),
                 .ampstart-headerbar + amp-sidebar + * {
@@ -1785,14 +1785,16 @@ export default function BlogHead() {
                     border-radius : 5px;
                 }
                 .fsh1{
-                    font-size : 2.5rem;
+                    font-size : 2rem;
                 }
                 .webpage-articleHeader{
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     width: 100%;
-                    min-height : 40px;
+                    min-height : 50px;
+                    height : 50px
+                    border-bottom: 1px solid rgba(243, 243, 243, 0.9529411765);
                 }
                 .webpage-articleHeader h1{
                     margin : 0;
