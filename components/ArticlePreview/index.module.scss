@@ -21,14 +21,14 @@
     .meta{
         display: flex;
         flex-direction: column;
-        height: calc( 90px + 1rem );
-        max-height: calc( 90px + 1rem );
+        height: calc( 100px + 1rem );
+        max-height: calc( 100px + 1rem );
         justify-content: space-between;
         border-bottom: 1px solid #ccc;
         padding-bottom: 1rem;
     }
     h1{
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         line-height: 1;
         font-weight: normal;
         display: -webkit-box;
@@ -40,12 +40,14 @@
     .foot{
         display: flex;
         justify-content: space-between;
-        font-size: .8rem;
+        font-size: .9rem;
         .cat{
             color: var(--color-secondary-light);
             background: -webkit-linear-gradient(140deg, var(--color1) 20%, var(--color2) 70%, var(--color3) 100%);
             padding: 0 1rem;
             border-radius: 10px;
+            border-top-left-radius: 0px;
+            border-bottom-right-radius: 0px;
         }
        
     }

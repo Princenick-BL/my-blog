@@ -114,7 +114,7 @@ export default function Home() {
           </div>
           <br></br>
           <div className={styles.stories}>
-            {(stories && stories.length > 1 ) &&
+            {(stories && stories.length > 2 ) &&
               <h3 className={styles.h3}><TabletOutlined/> Top stories</h3>
             }
             <div className={styles.storyList}>
