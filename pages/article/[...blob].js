@@ -9,6 +9,7 @@ import { getSection } from '../../utils/article.utils'
 import axios from 'axios'
 import { config as endpoint } from '../../constants'
 
+export const config = { amp: true };
 
 export default function Article({location,article}) {   
 
@@ -49,7 +50,7 @@ export default function Article({location,article}) {
                                 className="mb4 mx3 br5"
                             ></amp-img>
                         </header>
-                        <div  className="main">
+                        <div  className={styles.main}>
 
                             {article?.sections?.map((section,index)=>{
                                 return getSection(section)

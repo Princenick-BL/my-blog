@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './index.module.scss'
+import Link from 'next/link'
 
 export default function Header() {
   return (
@@ -22,6 +23,7 @@ export function ArticleHeader(){
                 ☰
             </div>
             <h1 className="webpage-logo">Luxe4Luxe</h1>
+            
         </header>
 
     )
