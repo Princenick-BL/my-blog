@@ -61,8 +61,6 @@ export default function Home() {
             <br></br> */}
             <br></br>
             <StoriesWidget/>
-            <br></br>
-            <br></br>
             <h3 className={styles.h3}> <FireOutlined /> Top articles</h3>
             <div className={styles.articleList}>
               {articles && articles.length >0 ? articles?.map((article,index)=>{
@@ -106,6 +104,7 @@ export default function Home() {
               
              
             </div>
+            <br></br>
             <div className={styles.readMore}>
               <div></div>
               <div className={styles.readmoreBlock}>
@@ -142,17 +141,21 @@ export default function Home() {
           </div>
         </main>
 
-        <footer className={styles.footer}>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Powered by{' '}
-            <span className={styles.logo}>
-              <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-            </span>
-          </a>
+        <footer className="ampstart-footer flex flex-column items-center px3">
+          <nav className="ampstart-footer-nav">
+              <ul className="list-reset flex flex-wrap mb3">
+                <li className="px1">
+                    <a className="text-decoration-none ampstart-label" href="#">About</a>
+                </li>
+                <li className="px1">
+                    <a className="text-decoration-none ampstart-label" href="#">Contact</a>
+                </li>
+                <li className="px1">
+                    <a className="text-decoration-none ampstart-label" href="#">Terms</a>
+                </li>
+              </ul>
+          </nav>
+          <small> © Your Company, 2016 </small>
         </footer>
       </div>
     </Suspense>

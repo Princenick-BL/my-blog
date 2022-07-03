@@ -11,6 +11,7 @@
   max-width: 700px;
   margin: 0 auto;
   .h3{
+    margin: 1rem;
     background: -webkit-linear-gradient(97deg, var(--color1) 20%, var(--color2) 70%, var(--color3) 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -54,6 +55,7 @@
       display: flex;
       justify-content: space-between;
       padding-right: 5px;
+      margin-right: 1rem;
       .readmoreBlock{
         padding: 2px 1rem;
         border-radius: 20px;
