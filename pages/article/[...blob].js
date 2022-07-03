@@ -37,9 +37,10 @@ export default function Article({location,article}) {
                             <br></br>
                             <address className="ampstart-byline clearfix mb4 px3 h5">
                                 <time
+                                    style={{overflow :"hidden"}}
                                     className="ampstart-byline-pubdate block bold my1"
                                     dateTime="2016-12-13"
-                                >{`Updated at : ${article?.updatedAt}`}</time>
+                                >{`Updated at : ${new Date(article?.updatedAt).toLocaleDateString()}`}</time>
                             </address>
                             <amp-img
                                 src={article?.poster}
