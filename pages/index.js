@@ -84,6 +84,8 @@ export default function Home() {
         />
       <div className={styles.container}>
         <Menu/>
+          <br></br>
+          <br></br>
 
         <main className={styles.main}>
           <div className={styles.articles}>

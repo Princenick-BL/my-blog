@@ -20,15 +20,8 @@ export default function BlogHead() {
             src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"
         ></script>
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
-        <style amp-boilerplate>
-            {"body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}"}        </style>
-        <noscript>
-            <style amp-boilerplate>
-                {"body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}"}
-            </style>
-        </noscript>
 
-        <style amp-custom="">{`
+        <style amp-custom>{`
     
             html {
                 font-family: sans-serif;
@@ -38,13 +31,16 @@ export default function BlogHead() {
                 margin: 0;
                 color: rgba(0, 0, 0, 0.85);
                 font-size: 16px;
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
                 font-variant: tabular-nums;
                 line-height: 2 ;
                 background-color: #fff;
-                font-feature-settings: 'tnum', "tnum";
             }`}
         </style>
+        
+        <style amp-boilerplate>
+            {"body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}"}       
+        </style>
+
         <style>{`
     
             html {
