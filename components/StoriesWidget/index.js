@@ -9,9 +9,9 @@ export default function Caroussel() {
   return (
     <div className={styles.container}>
      
-      {[0,1,2,3,4].map((res)=>{
+      {[0,1,2,3,4].map((res,index)=>{
         return(
-          <div className={styles.card} style={{backgroundImage:`url(${"https://picsum.photos/700/400"})`}}>
+          <div key={index} className={styles.card} style={{backgroundImage:`url(${"https://picsum.photos/700/400"})`}}>
             <div className={styles.calc}>
               <div className={styles.button}>Découvrir</div>
             </div>
