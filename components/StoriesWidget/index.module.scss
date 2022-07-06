@@ -1,11 +1,17 @@
 .container{
     width: 100vw;
     max-height: max-content;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
     display: flex;
     overflow-x: scroll;
     padding-left: 1rem;
 }
+/* width */
+.container::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
 .card{
     border-radius: 20px;
     overflow: hidden;
@@ -17,6 +23,10 @@
     min-height: calc(300px * 5 /5);
     max-height: calc(300px * 3 / 4);
     margin: 5px;
+    background-color: #000;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     .calc{
         position: absolute;
         bottom: 0;
@@ -25,8 +35,19 @@
         height: 60%;
         display: flex;
         justify-content: center;
-        align-items: center;
-        background-color: #000;
+        align-items: flex-end;
+        background-image: url("./calc.png");
+        .button{
+            background-color: #fff;
+            width: 100%;
+            margin: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            padding: 5px 0px;
+            border-radius: 10px;
+        }
         .tag{
             color: #fff;
             font-weight: bold;

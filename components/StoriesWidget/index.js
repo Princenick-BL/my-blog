@@ -8,36 +8,16 @@ import Image from 'next/image'
 export default function Caroussel() {
   return (
     <div className={styles.container}>
-      <div className={styles.card}>
-        <Image
-          width={700}
-          height={700*9/16}
-          src={"https://picsum.photos/700/400"}
-        />
-        <div className={styles.calc}>
-          
-        </div>
-      </div>
-      <div className={styles.card}>
-        <Image
-          width={700}
-          height={700*9/16}
-          src={"https://picsum.photos/700/400"}
-        />
-        <div className={styles.calc}>
-          
-        </div>
-      </div>
-      <div className={styles.card}>
-        <Image
-          width={700}
-          height={700*9/16}
-          src={"https://picsum.photos/700/400"}
-        />
-        <div className={styles.calc}>
-          
-        </div>
-      </div>
+     
+      {[0,1,2,3,4].map((res)=>{
+        return(
+          <div className={styles.card} style={{backgroundImage:`url(${"https://picsum.photos/700/400"})`}}>
+            <div className={styles.calc}>
+              <div className={styles.button}>Découvrir</div>
+            </div>
+          </div>
+        )
+      })}
       
     </div>
   )

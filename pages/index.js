@@ -89,14 +89,12 @@ export default function Home() {
         <br></br>
 
         <StoriesWidget/>
-        <br></br>
 
         <main className={styles.main}>
           <div className={styles.articles}>
             {/* <br></br>
             <input className={"searchInput"} type={"search"} placeholder='Search ...'/>
             <br></br> */}
-            <br></br>
             <h3 className={styles.h3}> <FireOutlined /> Top articles</h3>
             <div className={styles.articleList}>
               {articles && articles.length >0 ? articles?.map((article,index)=>{
