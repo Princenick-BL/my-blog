@@ -15,9 +15,30 @@ export default function Caroussel() {
           src={"https://picsum.photos/700/400"}
         />
         <div className={styles.calc}>
-          <div className={styles.tag}>CARS</div>
+          
         </div>
       </div>
+      <div className={styles.card}>
+        <Image
+          width={700}
+          height={700*9/16}
+          src={"https://picsum.photos/700/400"}
+        />
+        <div className={styles.calc}>
+          
+        </div>
+      </div>
+      <div className={styles.card}>
+        <Image
+          width={700}
+          height={700*9/16}
+          src={"https://picsum.photos/700/400"}
+        />
+        <div className={styles.calc}>
+          
+        </div>
+      </div>
+      
     </div>
   )
 }

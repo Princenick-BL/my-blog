@@ -84,8 +84,12 @@ export default function Home() {
         />
       <div className={styles.container}>
         <Menu/>
-          <br></br>
-          <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+
+        <StoriesWidget/>
+        <br></br>
 
         <main className={styles.main}>
           <div className={styles.articles}>
@@ -93,7 +97,6 @@ export default function Home() {
             <input className={"searchInput"} type={"search"} placeholder='Search ...'/>
             <br></br> */}
             <br></br>
-            <StoriesWidget/>
             <h3 className={styles.h3}> <FireOutlined /> Top articles</h3>
             <div className={styles.articleList}>
               {articles && articles.length >0 ? articles?.map((article,index)=>{
