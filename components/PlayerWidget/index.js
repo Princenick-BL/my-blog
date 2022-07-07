@@ -2,7 +2,7 @@ import React,{useRef,useEffect,useState} from 'react'
 import styles from './index.module.scss'
 import Player from './Player'
 import Image from 'next/image'
-
+import { categories } from '../../constants'
 
 export default function PlayerWidget({
     title,
@@ -26,7 +26,8 @@ export default function PlayerWidget({
                 <div className={styles.calc}>
                     <div className={styles.webStoryIcon}></div>
                     <div className={styles.title}>
-                        <p className={styles.category}>
+                        <p className={styles.category}
+                            style={{background:`-webkit-linear-gradient(140deg, ${categories?.find(e=>{ return e?.name === category})?.color || "var(--color1)"} 20%, var(--color2) 70%, var(--color3) 100%)`}}                                        >
                             {category}
                         </p>
                         <p>

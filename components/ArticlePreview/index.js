@@ -22,6 +22,7 @@ import styles from './index.module.scss'
 
 import React, { Component } from 'react'
 import Image from 'next/image'
+import { categories } from '../../constants'
 
 export default class ArticlePreview extends Component {
   render() {
@@ -40,7 +41,10 @@ export default class ArticlePreview extends Component {
               {this.props.title}
             </h1>
             <div className={styles.foot}>
-              <div className={styles.cat}>{this.props.category}</div>
+              <div 
+                className={styles.cat}
+                style={{background:`-webkit-linear-gradient(140deg, ${categories?.find(e=>{ return e?.name === this.props.category})?.color || "var(--color1)"} 20%, var(--color2) 70%, var(--color3) 100%)`}}
+              >{this.props.category}</div>
               <div className={styles.date}>{ new Date(this.props.updatedAt).toLocaleDateString()}</div>
             </div>
           </div>
