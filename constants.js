@@ -12,16 +12,19 @@ export const categories = [
     {
         id: 1,
         color : "red",
-        name : "Cars"
+        name : "Cars",
+        img : "cars.webp"
     },
     {
         id: 2,
         color : "green",
-        name : "Jewelry"
+        name : "Jewelry",
+        img : "jewelry.webp"
     },
     {
         id: 3,
         color : "orange",
-        name : "Houses"
+        name : "Houses",
+        img : "houses.webp"
     }
 ]

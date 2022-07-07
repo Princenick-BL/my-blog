@@ -5,18 +5,25 @@ import { getTopStories } from '../../services/stories'
 import { getArticle } from '../../services/articles'
 import Image from 'next/image'
 import Link from 'next/link'
+import { categories } from '../../constants'
+
+
 
 export default function Caroussel() {
   return (
     <div className={styles.container}>
      
-      {["Cars","Jewelry","House"].map((res,index)=>{
+      {categories.map((res,index)=>{
         return(
-          <Link key={index} href={`/${res.toLowerCase()}`}>
+          <Link key={index} href={`/${res?.name?.toLowerCase()}`}>
             <a>
-              <div className={styles.card} style={{backgroundImage:`url(${"https://picsum.photos/700/400"})`}}>
+              <div className={styles.card} 
+                style={{
+                  backgroundImage:`url(/img/${res?.img})`
+                }}
+              >
                 <div className={styles.cat}>
-                  {res.toUpperCase()}
+                  {res?.name?.toUpperCase()}
                 </div>
                 <div className={styles.calc}>
                   <div className={styles.button}>Découvrir</div>
