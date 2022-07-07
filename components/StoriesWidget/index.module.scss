@@ -1,11 +1,9 @@
 .container{
-    width: 100vw;
+    width: calc(100vw - 2rem);
     max-height: max-content;
     margin-bottom: 1rem;
     display: flex;
     overflow-x: scroll;
-    padding-right: 1rem;
-    padding-left: 1rem;
     max-width: 700px;
     margin: 0 auto;
 }
