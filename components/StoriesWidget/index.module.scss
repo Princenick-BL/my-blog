@@ -4,7 +4,10 @@
     margin-bottom: 1rem;
     display: flex;
     overflow-x: scroll;
+    padding-right: 1rem;
     padding-left: 1rem;
+    max-width: 700px;
+    margin: 0 auto;
 }
 /* width */
 .container::-webkit-scrollbar {
@@ -12,21 +15,49 @@
     height: 0px;
 }
 
+$color1 : var(--color1);
+
 .card{
     border-radius: 20px;
     overflow: hidden;
     position: relative;   
     width: 40vw;
     min-width: 230px;
-    max-width: 300px;
-    height: calc( 40vw * 3 / 4);
+    max-width: 230px;
+    height: calc( 40vw * 4 / 3);
     min-height: calc(300px * 5 /5);
-    max-height: calc(300px * 3 / 4);
+    max-height: calc(300px );
     margin: 5px;
     background-color: #000;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    .cat{
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        font-size: 2rem;
+        padding: 0 1rem;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .cat {
+        color: #fff;
+        font-weight: 900;
+        text-shadow: 
+            -0.0075em 0.0075em 0 mix(#000, blue, 94%),
+            0.005em 0.005em 0 mix(#000, blue, 60%),
+            0.01em 0.01em 0 mix(#000, blue, 62%), 
+            0.015em 0.015em mix(#000, blue, 64%), 
+            0.02em 0.02em 0 mix(#000, blue, 66%), 
+            0.025em 0.025em 0 mix(#000, blue, 68%),
+            0.03em 0.03em 0 mix(#000, blue, 70%),
+            0.035em 0.035em 0 mix(#000, blue, 72%);
+    }
+    
+    
     .calc{
         position: absolute;
         bottom: 0;
