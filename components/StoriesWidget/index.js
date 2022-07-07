@@ -12,9 +12,9 @@ export default function Caroussel() {
      
       {["Cars","Jewelry","House"].map((res,index)=>{
         return(
-          <Link href={`/${res.toLowerCase()}`}>
+          <Link key={index} href={`/${res.toLowerCase()}`}>
             <a>
-              <div key={index} className={styles.card} style={{backgroundImage:`url(${"https://picsum.photos/700/400"})`}}>
+              <div className={styles.card} style={{backgroundImage:`url(${"https://picsum.photos/700/400"})`}}>
                 <div className={styles.cat}>
                   {res.toUpperCase()}
                 </div>
