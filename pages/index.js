@@ -89,13 +89,14 @@ export default function Home() {
         <br></br>
 
         <StoriesWidget/>
+        <br></br>
 
         <main className={styles.main}>
           <div className={styles.articles}>
             {/* <br></br>
             <input className={"searchInput"} type={"search"} placeholder='Search ...'/>
             <br></br> */}
-            <h3 className={styles.h3}> <FireOutlined /> Top articles</h3>
+            <h3 className={styles.h3}> <FireOutlined /> &nbsp;  RECENT STORIES</h3>
             <div className={styles.articleList}>
               {articles && articles.length >0 ? articles?.map((article,index)=>{
                 return(
@@ -107,6 +108,7 @@ export default function Home() {
                     title={article?.title}
                     url={`/article/${article?._id}/${article?.slug}`}
                     updatedAt = {article?.updatedAt}
+                    description = {article?.description}
                   />
                   
                 )

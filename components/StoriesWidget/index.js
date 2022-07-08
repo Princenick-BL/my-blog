@@ -22,12 +22,15 @@ export default function Caroussel() {
                   backgroundImage:`url(/img/${res?.img})`
                 }}
               >
+                
                 <div className={styles.cat}>
                   {res?.name?.toUpperCase()}
                 </div>
+
                 <div className={styles.calc}>
                   <div className={styles.button}>Découvrir</div>
                 </div>
+
               </div>
             </a>
           </Link>

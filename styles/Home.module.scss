@@ -17,6 +17,13 @@
     -webkit-text-fill-color: transparent;
     font-size: 1.4rem;
     font-weight: bold;
+    font: 600 0.8125rem/1.6 Inconsolata,verdana,sans-serif;
+    color: #021425;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    
     svg{
       fill: var(--color-primary-light);
     }
@@ -202,3 +209,6 @@
   }
 }
 
+.main * {
+  font-family: Montserrat,arial,sans-serif;
+}

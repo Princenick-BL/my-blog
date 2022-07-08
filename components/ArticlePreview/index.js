@@ -37,14 +37,21 @@ export default class ArticlePreview extends Component {
             />
           </div>
           <div className={styles.meta}>
+            <div 
+              className={styles.cat}
+              // style={{background:`-webkit-linear-gradient(140deg, ${categories?.find(e=>{ return e?.name === this.props.category})?.color || "var(--color1)"} 20%, var(--color2) 70%, var(--color3) 100%)`}}
+            >{this.props.category?.toUpperCase()}</div>
             <h1>
               {this.props.title}
             </h1>
             <div className={styles.foot}>
-              <div 
+              <p>
+                {this.props.description}
+              </p>
+              {/* <div 
                 className={styles.cat}
                 style={{background:`-webkit-linear-gradient(140deg, ${categories?.find(e=>{ return e?.name === this.props.category})?.color || "var(--color1)"} 20%, var(--color2) 70%, var(--color3) 100%)`}}
-              >{this.props.category}</div>
+              >{this.props.category}</div> */}
               <div className={styles.date}>{ new Date(this.props.updatedAt).toLocaleDateString()}</div>
             </div>
           </div>
