@@ -27,7 +27,7 @@
         padding-bottom: 1rem;
     }
     h1{
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         font-weight: normal;
         display: -webkit-box;
         -webkit-line-clamp: 1; /*No of lines after which the ellipsis needs to be added*/
@@ -35,7 +35,6 @@
         overflow: hidden;
         margin: 0;
         color: #021425;
-        font-size: 1.125rem;
         line-height: 1.11111;
         letter-spacing: .2px;
         font-weight: 700;
@@ -59,7 +58,7 @@
         flex-direction: column;
         justify-content: space-between;
         font-size: .9rem;
-       
+        
     }
 
     p{
@@ -67,6 +66,7 @@
         -webkit-line-clamp: 3; /*No of lines after which the ellipsis needs to be added*/
         -webkit-box-orient: vertical;
         overflow: hidden;
+        font-size: 1.1rem;
     }
     .descs{
         margin-top: 10px;
