@@ -12,8 +12,25 @@ import { categories } from '../../constants'
 export default function Caroussel() {
   return (
     <div className={styles.container}>
-     
-      {categories.map((res,index)=>{
+      <div>
+        <Image
+          src={`/img/${categories[0]?.img}`}
+          width={700}
+          height={700 * 9 / 16}
+        />
+        <div className={styles.info}>
+          <h1 className={styles.cat}>
+            {categories[0]?.name?.toUpperCase()}
+          </h1>
+          <p>
+            {categories[0]?.description}
+          </p>
+          <div className={styles.link}>
+            Découvrir
+          </div>
+        </div>
+      </div>
+      {/* {categories.map((res,index)=>{
         return(
           <Link key={index} href={`/${res?.name?.toLowerCase()}`}>
             <a>
@@ -22,7 +39,7 @@ export default function Caroussel() {
                   backgroundImage:`url(/img/${res?.img})`
                 }}
               >
-                
+
                 <div className={styles.cat}>
                   {res?.name?.toUpperCase()}
                 </div>
@@ -35,7 +52,7 @@ export default function Caroussel() {
             </a>
           </Link>
         )
-      })}
+      })} */}
       
     </div>
   )

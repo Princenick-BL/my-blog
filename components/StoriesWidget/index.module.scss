@@ -1,11 +1,54 @@
 .container{
-    width: calc(100vw - 2rem);
+    width: 100vw;
     max-height: max-content;
     margin-bottom: 1rem;
     display: flex;
     overflow-x: scroll;
     max-width: 700px;
     margin: 0 auto;
+    .info{
+        max-width: 300px;
+        margin-top: 20px;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin-left: auto;
+        margin-right: auto;
+        .cat{
+            line-height: 1.11111;
+            font-family: Crimson Text,times,serif;
+            font-weight: 600;
+            font-size: 2rem;
+            color: #021425;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        p{
+            text-align: center;
+            color: #021425;
+            font-size: 1rem;
+            line-height: 1.11111;
+            opacity: .85;
+            font: 400 0.9375rem/1.42857 Crimson Text,times,serif;
+            letter-spacing: normal;
+            padding-top: 0.5rem;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 1.5rem;
+        }
+        .link{
+            border: 1px solid #021425;
+            color: #021425;
+            font: 400 1rem/1.11111 Inconsolata,verdana,sans-serif;
+            text-transform: uppercase;
+            padding: 10px 15px;
+            opacity: .85;
+            cursor: pointer;
+            width: max-content;
+            margin: 0 auto;
+        }
+    }
 }
 /* width */
 .container::-webkit-scrollbar {
