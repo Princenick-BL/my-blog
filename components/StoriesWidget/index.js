@@ -19,7 +19,7 @@ export default function Caroussel() {
 
         {categories.map((res,index)=>{
           return (
-            <div style={{minHeight:"500px"}} key={index}>
+            <div  key={index}>
               <Image
                 src={`/img/${res?.img}`}
                 width={700}
