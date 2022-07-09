@@ -39,38 +39,43 @@
         display: none;
         animation: closeModal 0.4s ease-in forwards;
     }
-    .side{
-        display: none;
-        position: fixed;
-        width: 60vw;
+    .shadow{
+        background-color: rgba(24, 22, 22, 0.199);
+        width: 100vw;
         height: 100vh;
-        display: flex !important;
-        flex-direction: column;
-        top: 0;
-        left: 0;
-        //display: none;
-        background-color: #fff;
-        z-index: 10;
-        max-width: 300px;
-        border-right: 1px solid #f3f3f3f3;
-        padding: 1rem;
-     
-        .text{
-
-            h4{
-                font-size: 2em;
-            }
-            ul{
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                li{
-                    margin: 0 0 2rem;
-                    text-transform : to-upper-case;
+        .side{
+            display: none;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            display: flex !important;
+            flex-direction: column;
+            top: 0;
+            left: 0;
+            //display: none;
+            background-color: #fff;
+            z-index: 10;
+            max-width: 300px;
+            border-right: 1px solid #f3f3f3f3;
+            padding: 1rem;
+         
+            .text{
+    
+                h4{
+                    font-size: 2em;
+                }
+                ul{
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    li{
+                        margin: 0 0 2rem;
+                        text-transform : to-upper-case;
+                    }
                 }
             }
+            
         }
-        
     }
     @keyframes openModal {
         0% { transform: translateX(-100%); }

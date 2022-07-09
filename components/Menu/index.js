@@ -17,38 +17,41 @@ export function HomeMenu() {
                 </div>
             </div>
             {show &&
-                <div className={styles.side+" "+(show ? styles.active : styles.innactive)}>
-                    <div className={styles.text}> 
-                        <h4 style={{cursor:"pointer"}} onClick={(e)=>setShow(false)}>x</h4>
-                        <br></br>
-                        <br></br>
+                <div className={styles.shadow}>
 
-                        <nav className="ampstart-sidebar-nav ampstart-nav">
-                        <ul className="list-reset m0 p0 ampstart-label">
-                            <li className="ampstart-nav-item">
-                                <Link href={"/"}>
-                                    <a className="ampstart-nav-link">HOME</a>
-                                </Link>
+                    <div className={styles.side+" "+(show ? styles.active : styles.innactive)}> 
+                        <div className={styles.text}> 
+                            <h4 style={{cursor:"pointer"}} onClick={(e)=>setShow(false)}>x</h4>
+                            <br></br>
+                            <br></br>
+
+                            <nav className="ampstart-sidebar-nav ampstart-nav">
+                            <ul className="list-reset m0 p0 ampstart-label">
+                                <li className="ampstart-nav-item">
+                                    <Link href={"/"}>
+                                        <a className="ampstart-nav-link">HOME</a>
+                                    </Link>
+                                </li>
+                                
+                                <li className="ampstart-nav-item">
+                                    <a className="ampstart-nav-link" href="#">BEAUTY</a>
+                                </li>
+                                <li className="ampstart-nav-item">
+                                    <a className="ampstart-nav-link" href="#">SHOP</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        
+                        <ul className="ampstart-sidebar-faq list-reset m0">
+                            <li className="ampstart-faq-item">
+                                <a href="#" className="text-decoration-none">About</a>
                             </li>
-                            
-                            <li className="ampstart-nav-item">
-                                <a className="ampstart-nav-link" href="#">BEAUTY</a>
-                            </li>
-                            <li className="ampstart-nav-item">
-                                <a className="ampstart-nav-link" href="#">SHOP</a>
+                            <li className="ampstart-faq-item">
+                                <a href="#" className="text-decoration-none">Contact</a>
                             </li>
                         </ul>
-                    </nav>
-
-                    
-                    <ul className="ampstart-sidebar-faq list-reset m0">
-                        <li className="ampstart-faq-item">
-                            <a href="#" className="text-decoration-none">About</a>
-                        </li>
-                        <li className="ampstart-faq-item">
-                            <a href="#" className="text-decoration-none">Contact</a>
-                        </li>
-                    </ul>
+                        </div>
                     </div>
                 </div>
             }
