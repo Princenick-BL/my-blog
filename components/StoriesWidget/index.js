@@ -12,14 +12,14 @@ import { Carousel } from 'react-responsive-carousel';
 
 export default function Caroussel() {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={{height:"max-content"}}>
       <Carousel
-       
+      
       >
 
         {categories.map((res,index)=>{
           return (
-            <div  key={index}>
+            <div style={{height:"max-content",paddingBottom:"50px"}}  key={index}>
               <Image
                 src={`/img/${res?.img}`}
                 width={700}

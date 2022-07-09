@@ -390,3 +390,9 @@ $letterStagger: 0.1s;
 .dot{
 	background: #ccc !important;
 }
+
+.slider-wrapper{
+	ul{
+		height: max-content;
+	}
+}
