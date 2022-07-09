@@ -5,6 +5,11 @@
     //overflow-x: scroll;
     max-width: 700px;
     margin: 0 auto;
+    button{
+        background-color: transparent;
+        border: none;
+        outline: none;
+    }
     .info{
         max-width: 300px;
         margin-top: 20px;
