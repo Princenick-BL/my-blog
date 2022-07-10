@@ -12,7 +12,17 @@
   margin: 0 auto;
   .h3{
     margin: 1rem;
-    background: -webkit-linear-gradient(97deg, var(--color1) 20%, var(--color2) 70%, var(--color3) 100%);
+    //background: -webkit-linear-gradient(97deg, var(--color1) 20%, var(--color2) 70%, var(--color3) 100%);
+    background-image: linear-gradient(
+    to right,
+    #462523 0,
+          #cb9b51 22%, 
+    #f6e27a 45%,
+    #f6f2c0 50%,
+    #f6e27a 55%,
+    #cb9b51 78%,
+    #462523 100%
+    );
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 1rem;
@@ -25,7 +35,16 @@
     align-items: center;
     
     svg{
-      fill: var(--color-primary-light);
+      fill: linear-gradient(
+        to right,
+        #462523 0,
+              #cb9b51 22%, 
+        #f6e27a 45%,
+        #f6f2c0 50%,
+        #f6e27a 55%,
+        #cb9b51 78%,
+        #462523 100%
+        );
     }
   
   }

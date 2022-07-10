@@ -2154,7 +2154,20 @@ export default function BlogHead() {
                 line-height : 1.8;
                 font-size : 1.1rem;
             } 
-            
+            .webpage-logo{
+                background-image: linear-gradient(
+                    to right,
+                    #462523 0,
+                          #cb9b51 22%, 
+                    #f6e27a 45%,
+                    #f6f2c0 50%,
+                    #f6e27a 55%,
+                    #cb9b51 78%,
+                    #462523 100%
+                );
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
         `}
         </style>
     </Head>

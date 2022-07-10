@@ -13,7 +13,7 @@ export function HomeMenu() {
                 ☰
                 </div>
                 <div className={styles.content}>
-                    <h1>Luxe4Luxe</h1>
+                    <h1>LuxeStoryBlog</h1>
                 </div>
             </div>
             {show &&

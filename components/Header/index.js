@@ -22,7 +22,7 @@ export function ArticleHeader(){
             >
                 ☰
             </div>
-            <h1 className="webpage-logo">Luxe4Luxe</h1>
+            <h1 className="webpage-logo">LuxeStoryBlog</h1>
             
         </header>
 
