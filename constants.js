@@ -14,20 +14,26 @@ export const categories = [
         color : "red",
         name : "Cars",
         description : "Elit incididunt quis minim adipisicing ea culpa dolore consectetur.",
-        img : "cars.webp"
+        img : "cars.webp",
+        width: 5066,
+        height : 3000,
     },
     {
         id: 2,
         color : "green",
         name : "Jewelry",
         description : "Elit incididunt quis minim adipisicing ea culpa dolore consectetur.",
-        img : "jewelry.webp"
+        img : "jewelry.webp",
+        width: 2000,
+        height : 2000,
     },
     {
         id: 3,
         color : "orange",
         name : "Houses",
         description : "Elit incididunt quis minim adipisicing ea culpa dolore consectetur.",
-        img : "houses.webp"
+        img : "houses.webp",
+        width: 1600,
+        height : 1065,
     }
 ]

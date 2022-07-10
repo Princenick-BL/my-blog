@@ -26,8 +26,8 @@ export default function Example(props){
               <div className={styles.img}>
                 <Image
                   src={`/img/${res?.img}`}
-                  width={700}
-                  height={ res?.name?.toLocaleLowerCase() ==="jewelry" ? 700: (700 * 3 / 4)}
+                  width={res.width}
+                  height={res?.height}
                   layout="responsive"
                 />
               </div>
