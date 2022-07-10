@@ -29,6 +29,7 @@ export default function Example(props){
                   width={res.width}
                   height={res?.height}
                   layout="responsive"
+                  style={{overflow:"hidden"}}
                 />
               </div>
               <div className={styles.info}>

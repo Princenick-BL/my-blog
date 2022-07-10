@@ -1,5 +1,5 @@
 .container{
-    width: 100vw;
+    width: calc( 100vw - 10px );
     max-height: max-content;
     margin-bottom: 1rem;
     //overflow-x: scroll;
@@ -18,13 +18,15 @@
         background-color: #fff;
         border-radius: 15px;
         box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(243, 243, 243, 0.9529411765) 0px 0px 0px 1px;
-
+        max-height: 170px;
         .img{
             width: 40vw;
+            max-height: 150px;
             margin: .5rem;
             border-radius: 10px;
             overflow: hidden;
             margin-right: .5rem;
+            align-items: center;
         }
 
         .info{
