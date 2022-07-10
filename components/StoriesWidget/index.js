@@ -10,8 +10,6 @@ import { categories } from '../../constants'
 import Carousel from 'react-material-ui-carousel'
 
 
-
-
 export default function Example(props){
 
   return (
@@ -21,8 +19,8 @@ export default function Example(props){
         animation="slide"
       > 
         {categories.map((res,index)=>{
-          // const dim = ImageSize.imageSize(`/img/${res?.img}`)
-          // console.log("Dimensions",dim)
+         
+         
           return (
             <div className={styles.box}  key={index}>
               <div className={styles.img}>
