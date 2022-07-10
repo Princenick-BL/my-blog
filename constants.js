@@ -15,7 +15,7 @@ export const categories = [
         name : "Cars",
         description : "Elit incididunt quis minim adipisicing ea culpa dolore consectetur.",
         img : "cars.webp",
-        width: 5066,
+        width: 3000,
         height : 3000,
     },
     {
@@ -33,7 +33,7 @@ export const categories = [
         name : "Houses",
         description : "Elit incididunt quis minim adipisicing ea culpa dolore consectetur.",
         img : "houses.webp",
-        width: 1600,
+        width: 1065,
         height : 1065,
     }
 ]
