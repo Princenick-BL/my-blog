@@ -21,7 +21,7 @@ export function HomeMenu() {
 
                     <div className={styles.side+" "+(show ? styles.active : styles.innactive)}> 
                         <div className={styles.text}> 
-                            <h4 style={{cursor:"pointer"}} onClick={(e)=>setShow(false)}>x</h4>
+                            <h4 style={{cursor:"pointer",marginTop:".5rem"}} onClick={(e)=>setShow(false)}>✕</h4>
                             <br></br>
                             <br></br>
 

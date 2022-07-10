@@ -14,7 +14,10 @@ export default function Example(props){
 
   return (
 
-      <Carousel className={styles.container} > 
+      <Carousel 
+        className={styles.container} 
+        animation="slide"
+      > 
         {categories.map((res,index)=>{
         return (
           <div className={styles.box}  key={index}>
@@ -33,9 +36,9 @@ export default function Example(props){
               <p>
                 {res?.description}
               </p>
-              <div className={styles.link}>
+              {/* <div className={styles.link}>
                 Découvrir
-              </div>
+              </div> */}
             </div>
           </div>
           

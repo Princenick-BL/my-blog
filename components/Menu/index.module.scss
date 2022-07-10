@@ -40,7 +40,7 @@
         animation: closeModal 0.4s ease-in forwards;
     }
     .shadow{
-        background-color: rgba(24, 22, 22, 0.199);
+        background-color: rgba(0,0,0,0.5);
         width: 100vw;
         height: 100vh;
         .side{
@@ -57,7 +57,8 @@
             z-index: 10;
             max-width: 300px;
             border-right: 1px solid #f3f3f3f3;
-            padding: 1rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
          
             .text{
     

@@ -29,7 +29,6 @@
         .info{
             width: 60vw;
             max-width: 300px;
-            margin-top: 20px;
             bottom: auto;
             left: auto;
             transform: none;
@@ -59,9 +58,10 @@
                 //padding-top: 0.5rem;
                 //margin-bottom: 1.5rem;
                 display: -webkit-box;
-                -webkit-line-clamp: 1; /*No of lines after which the ellipsis needs to be added*/
+                -webkit-line-clamp: 3; /*No of lines after which the ellipsis needs to be added*/
                 -webkit-box-orient: vertical;
                 overflow: hidden;
+                margin: 0;
             }
             .link{
                 //border: 1px solid #021425;

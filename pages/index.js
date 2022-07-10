@@ -86,6 +86,7 @@ export default function Home() {
           <Menu/>
           <br></br>
           <br></br>
+          <br></br>
 
           <StoriesWidget/>
           <br></br>
