@@ -17,12 +17,15 @@ export default function Example(props){
       <Carousel className={styles.container} > 
         {categories.map((res,index)=>{
         return (
-          <div style={{height:"max-content",paddingBottom:"50px"}}  key={index}>
-            <Image
-              src={`/img/${res?.img}`}
-              width={700}
-              height={700 * 9 / 16}
-            />
+          <div className={styles.box}  key={index}>
+            <div className={styles.img}>
+              <Image
+                src={`/img/${res?.img}`}
+                width={700}
+                height={700 * 3 / 4}
+                layout="responsive"
+              />
+            </div>
             <div className={styles.info}>
               <h1 className={styles.cat}>
                 {res?.name?.toUpperCase()}
