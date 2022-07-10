@@ -10,6 +10,8 @@ import { categories } from '../../constants'
 import Carousel from 'react-material-ui-carousel'
 
 
+
+
 export default function Example(props){
 
   return (
@@ -19,30 +21,32 @@ export default function Example(props){
         animation="slide"
       > 
         {categories.map((res,index)=>{
-        return (
-          <div className={styles.box}  key={index}>
-            <div className={styles.img}>
-              <Image
-                src={`/img/${res?.img}`}
-                width={700}
-                height={700 * 3 / 4}
-                layout="responsive"
-              />
+          // const dim = ImageSize.imageSize(`/img/${res?.img}`)
+          // console.log("Dimensions",dim)
+          return (
+            <div className={styles.box}  key={index}>
+              <div className={styles.img}>
+                <Image
+                  src={`/img/${res?.img}`}
+                  width={700}
+                  height={ res?.name?.toLocaleLowerCase() ==="jewelry" ? 700: (700 * 3 / 4)}
+                  layout="responsive"
+                />
+              </div>
+              <div className={styles.info}>
+                <h1 className={styles.cat}>
+                  {res?.name?.toUpperCase()}
+                </h1>
+                <p>
+                  {res?.description}
+                </p>
+                {/* <div className={styles.link}>
+                  Découvrir
+                </div> */}
+              </div>
             </div>
-            <div className={styles.info}>
-              <h1 className={styles.cat}>
-                {res?.name?.toUpperCase()}
-              </h1>
-              <p>
-                {res?.description}
-              </p>
-              {/* <div className={styles.link}>
-                Découvrir
-              </div> */}
-            </div>
-          </div>
-          
-        )
+            
+          )
         })}
       </Carousel>
   )
