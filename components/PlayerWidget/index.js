@@ -26,8 +26,7 @@ export default function PlayerWidget({
                 <div className={styles.calc}>
                     <div className={styles.webStoryIcon}></div>
                     <div className={styles.title}>
-                        <p className={styles.category}
-                            style={{background:`-webkit-linear-gradient(140deg, ${categories?.find(e=>{ return e?.name === category})?.color || "var(--color1)"} 20%, var(--color2) 70%, var(--color3) 100%)`}}                                        >
+                        <p className={styles.category}>
                             {category}
                         </p>
                         <p>
