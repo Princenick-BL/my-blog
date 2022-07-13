@@ -22,7 +22,7 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"></link>
-        <style amp-custom>
+        <style amp-custom="amp-custom">
         {`  [data-product-id="lamp"] {
               top: 20%;
               left: 21%;
