@@ -38,7 +38,7 @@ export default function Home() {
         <amp-story-page id="page-1" 
           style = {{ 
             borderRadius : "15px ",
-            width:"calc( 100% - 6px )",
+            maxWidth:"calc( 100% - 6px )",
             backgroundColor:"#fff",
             border : "3px solid #f3f3f3f3",
             overflow : "hidden"
