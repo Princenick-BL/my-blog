@@ -84,13 +84,7 @@ export default function Home() {
         />
         <div className={styles.container}>
           <Menu/>
-          <br></br>
-          <br></br>
-          <br></br>
-
           <StoriesWidget/>
-          <br></br>
-
           <main className={styles.main}>
             <div className={styles.articles}>
               {/* <br></br>
