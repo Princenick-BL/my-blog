@@ -99,15 +99,24 @@ export default function Menu() {
             <ul className="list-reset m0 p0 ampstart-label">
                 <li className="ampstart-nav-item">
                     <Link href={"/"}>
-                        <a className="ampstart-nav-link">HOME</a>
+                        <a className="ampstart-nav-link" onClick={(e)=>{setShow(true)}}>HOME</a>
                     </Link>
                 </li>
                 
                 <li className="ampstart-nav-item">
-                    <a className="ampstart-nav-link" href="/article/category/Jewelry">JEWELRY</a>
+                    <Link href={"/article/category/Cars"}>
+                        <a className="ampstart-nav-link"  onClick={(e)=>{setShow(true)}}>CARS</a>
+                    </Link>
                 </li>
                 <li className="ampstart-nav-item">
-                    <a className="ampstart-nav-link" href="/article/category/Houses">HOUSES</a>
+                    <Link href={"/article/category/Jewelry"}>
+                        <a className="ampstart-nav-link"  onClick={(e)=>{setShow(true)}}>JEWELRY</a>
+                    </Link>
+                </li>
+                <li className="ampstart-nav-item">
+                    <Link href={"/article/category/Houses"}>
+                        <a className="ampstart-nav-link" >HOUSES</a>
+                    </Link>
                 </li>
             </ul>
         </nav>
