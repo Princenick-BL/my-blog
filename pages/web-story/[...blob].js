@@ -3,6 +3,15 @@ import Head from 'next/head'
 export const config = { amp: true };
 
 export default function Home() {
+
+  const style = { 
+    borderRadius : "15px ",
+    maxWidth:"calc( 100% - 6px )",
+    backgroundColor:"#fff",
+    border : "3px solid #f4f4f4f4",
+    overflow : "hidden"
+  }
+
   return (
     <>
       <Head>
@@ -35,25 +44,23 @@ export default function Home() {
         poster-landscape-src="https://amp.dev/static/samples/img/story_dog2_landscape.jpg"
       >
         {/* <!-- A story consists of one or more pages. Each page is declared by an `amp-story-page` element. Pages are designed by layering videos, images and text. Here we have a page that uses two layers. One layer filling the available space with an image and one text layer that shows a heading. --> */}
-        <amp-story-page id="page-1" 
-          style = {{ 
-            borderRadius : "15px ",
-            maxWidth:"calc( 100% - 6px )",
-            backgroundColor:"#fff",
-            border : "3px solid #f3f3f3f3",
-            overflow : "hidden"
-          }}>
+        <amp-story-page id="page-1" style = {style}>
           <amp-story-grid-layer template="vertical">
             <amp-img  id="image1"
               animate-in="fade-in"
               animate-in-delay="1s"
               animate-in-duration="1s"
               src="https://unsplash.it/720/320/?image=10"
-              width="720"
-              height="420"
+              width={720}
+              height={700*9/16}
               layout="responsive"
               alt="..."
-              style={{position : "absolute", top:"100px", margin:"5px",width:"calc( 100% - 15px )",borderRadius:"15px"}}
+              style={{
+                position : "absolute", 
+                top:"0", 
+                left:"0",
+                width:"100%",
+              }}
             ></amp-img>
           </amp-story-grid-layer>
           
@@ -84,7 +91,7 @@ export default function Home() {
         </amp-story-page>
 
         {/* <!-- Here we have a page consisting of a video which autoplays and loops. --> */}
-        <amp-story-page id="page-2"  style = {{ borderRadius : "15px ",width:"calc( 100% - 2px )",backgroundColor:"#fff"}}>
+        <amp-story-page id="page-2"  style = {style}>
           <amp-story-grid-layer template="fill">
             <amp-video
               autoplay=""
@@ -125,7 +132,7 @@ export default function Home() {
         </amp-story-page>
 
         {/* <!-- Pre-defined entry animations make it possible to create dynamic pages without videos. The length and initial delay can be customized using the `animate-in-duration` and `animate-in-delay` properties. The [animations sample](/documentation/examples/visual-effects/amp_story_animations/) shows all available animantions in action. --> */}
-        <amp-story-page id="animation-demo"  style = {{ borderRadius : "15px ",width:"calc( 100% - 2px )",backgroundColor:"#fff"}}>
+        <amp-story-page id="animation-demo"  style = {style}>
           <amp-story-grid-layer template="fill">
             <amp-img
               src="https://amp.dev/static/samples/img/story_dog4.jpg"
@@ -146,7 +153,7 @@ export default function Home() {
           </amp-story-grid-layer>
         </amp-story-page>
 
-        <amp-story-page id="animation-demo"  style = {{ borderRadius : "15px ",width:"calc( 100% - 2px )",backgroundColor:"#fff"}}>
+        <amp-story-page id="animation-demo"  style = {style}>
           <amp-story-grid-layer template="fill">
             <amp-img
               src="https://amp.dev/static/samples/img/story_dog4.jpg"
@@ -167,7 +174,7 @@ export default function Home() {
           </amp-story-grid-layer>
         </amp-story-page>
 
-        <amp-story-page id="animation-demo"  style = {{ borderRadius : "15px ",width:"calc( 100% - 2px )",backgroundColor:"#fff"}}>
+        <amp-story-page id="animation-demo"  style = {style}>
           <amp-story-grid-layer template="fill">
             <amp-img
               src="https://amp.dev/static/samples/img/story_dog4.jpg"
@@ -188,7 +195,7 @@ export default function Home() {
           </amp-story-grid-layer>
         </amp-story-page>
 
-        <amp-story-page id="animation-demo"  style = {{ borderRadius : "15px ",width:"calc( 100% - 2px )",backgroundColor:"#fff"}}>
+        <amp-story-page id="animation-demo"  style = {style}>
           <amp-story-grid-layer template="fill">
             <amp-img
               src="https://amp.dev/static/samples/img/story_dog4.jpg"
@@ -209,7 +216,7 @@ export default function Home() {
           </amp-story-grid-layer>
         </amp-story-page>
 
-        <amp-story-page id="animation-demo"  style = {{ borderRadius : "15px ",width:"calc( 100% - 2px )",backgroundColor:"#fff"}}>
+        <amp-story-page id="animation-demo"  style = {style}>
           <amp-story-grid-layer template="fill">
             <amp-img
               src="https://amp.dev/static/samples/img/story_dog4.jpg"
@@ -229,7 +236,7 @@ export default function Home() {
             </h2>
           </amp-story-grid-layer>
         </amp-story-page>
-        <amp-story-page id="animation-demo"  style = {{ borderRadius : "15px ",width:"calc( 100% - 2px )",backgroundColor:"#fff"}}>
+        <amp-story-page id="animation-demo"  style = {style}>
           <amp-story-grid-layer template="fill">
             <amp-img
               src="https://amp.dev/static/samples/img/story_dog4.jpg"
@@ -251,7 +258,7 @@ export default function Home() {
         </amp-story-page>mon
 
         {/* <!-- Stories can use predefined layouts to style the page. Here we're using the `thirds` template. For an overview about the available layouts take a look at the [layouts sample](/documentation/examples/style-layout/amp_story_layouts/). --> */}
-        <amp-story-page id="layout-demo"  style = {{ borderRadius : "15px ",width:"calc( 100% - 2px )",backgroundColor:"#fff"}}>
+        <amp-story-page id="layout-demo"  style = {style}>
           <amp-story-grid-layer template="thirds">
             <amp-img
               grid-area="upper-third"

@@ -10,7 +10,12 @@ export function HomeMenu() {
         <div className={styles.header}>
             <div className={styles.head}>
                 <div className={styles.button} onClick={(e)=>setShow(true)}>
-                ☰
+                    <div>
+                        ☰
+                    </div>
+                    <div className={styles.text}>
+                        MENU
+                    </div>
                 </div>
                 <div className={styles.content}>
                     <h1>LuxeStoryBlog</h1>
