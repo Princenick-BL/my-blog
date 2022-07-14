@@ -20,7 +20,11 @@ export default function Article({location,article}) {
                 <title>Hello, AMPs</title>
                 <link rel="canonical" href={location}/>
             </Head>
-            <BlogHead/>
+            <BlogHead
+                poster={article?.poster}
+                description={article?.description}
+                publishedAt={article?.updatedAt}
+            />
             <Fragment>
                
                 <ArticleHeader/>

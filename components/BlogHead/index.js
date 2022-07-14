@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 
 
-export default function BlogHead() {
+export default function BlogHead({poster,publishedAt,description}) {
     
   return (
     <Head>
@@ -2736,6 +2736,17 @@ export default function BlogHead() {
           }
           `}
         </style>
+        <script type="application/ld+json">
+        {`{
+            "@context": "http://schema.org",
+            "@type": "NewsArticle",
+            "headline":  ${description},
+            "datePublished": ${publishedAt} ,
+            "image": [
+                ${poster}
+            ]
+        }`}
+        </script>
     </Head>
   )
 }
