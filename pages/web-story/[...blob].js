@@ -16,6 +16,8 @@ export default function Home() {
     <>
       <Head>
         <title>Example AMP Story in Next.js</title>
+        <meta name="viewport" content="width=device-width"/>
+        <meta name="theme-color" content="#1b1588" />
         <script
           async
           key="amp-story"
