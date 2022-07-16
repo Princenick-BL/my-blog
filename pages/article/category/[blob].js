@@ -72,12 +72,7 @@ export default function Category({location,articles,category}) {
                
               </div>
               <br></br>
-              <div className={styles.readMore}>
-                <div></div>
-                <div className={styles.readmoreBlock}>
-                  <a href='#'>{"Read more >"}</a>
-                </div>
-              </div>
+              
             </div>
            
           </main>

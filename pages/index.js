@@ -19,6 +19,7 @@ import PlayerWidget from '../components/PlayerWidget'
 import { useRouter } from 'next/router'
 import Script from 'next/script'
 import * as gtag from '../lib/gtag'
+import Link from 'next/link'
 
 export default function Home() {
 
@@ -138,7 +139,9 @@ export default function Home() {
               <div className={styles.readMore}>
                 <div></div>
                 <div className={styles.readmoreBlock}>
-                  <a href='#'>{"Read more >"}</a>
+                  <Link href={"/article"}>
+                    <a>{"Read more >"}</a>
+                  </Link>
                 </div>
               </div>
             </div>

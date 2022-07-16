@@ -118,6 +118,11 @@ export default function Menu() {
                         <a className="ampstart-nav-link" >HOUSES</a>
                     </Link>
                 </li>
+                <li className="ampstart-nav-item" onClick={(e)=>{setShow(false)}}>
+                    <Link href={"/webstories"}>
+                        <a className="ampstart-nav-link" >Web Stories</a>
+                    </Link>
+                </li>
             </ul>
         </nav>
 
