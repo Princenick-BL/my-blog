@@ -37,7 +37,7 @@ export default function Home() {
       </Head>
 
       <amp-story
-        standalone
+        standalone=""
         title="Stories in AMP - Hello World"
         publisher="AMP Project"
         publisher-logo-src="https://amp.dev/favicons/coast-228x228.png"
