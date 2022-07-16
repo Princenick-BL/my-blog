@@ -12,6 +12,25 @@ export default function Home() {
     overflow : "hidden"
   }
 
+  const anims = [
+    "fade-in",
+    "fly-in-bottom",
+    "fly-in-left",
+    "fly-in-right",
+    "fly-in-top",
+    "pulse",
+    "pan-left",
+    "pan-right",
+    "pan-down",
+    "pan-up",
+    "zoom-in",
+    "zoom-out"
+  ]
+
+  function randomElement(items){
+    return items[Math.floor(Math.random()*items.length)];
+  }
+
   return (
     <>
       <Head>
@@ -161,9 +180,15 @@ export default function Home() {
           </amp-story-grid-layer>
           <amp-story-grid-layer template="thirds">
             <h2
-              animate-in="fly-in-bottom"
+              animate-in={randomElement(anims) || "fly-in-bottom"}
               grid-area="lower-third"
               animate-in-delay="0.4s"
+              style={{
+                display:"flex",
+                flexDirection : "column",
+                alignItems : "center",
+                justifyContent : "center"
+              }}
             >
               Best walk ever!
             </h2>
