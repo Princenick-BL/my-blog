@@ -17,7 +17,7 @@ export const getTopStories = async ()=>{
     return null
 }
 
-export const getArticleByCat = async (category)=>{
+export const getStoriesByCat = async (category)=>{
     const res = await axios.get(`${config.API_ENDPOINT}/stories/category/${category}`)
     if(res){
         return res.data
