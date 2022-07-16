@@ -19,12 +19,6 @@ export default function Home() {
     "fly-in-right",
     "fly-in-top",
     "pulse",
-    "pan-left",
-    "pan-right",
-    "pan-down",
-    "pan-up",
-    "zoom-in",
-    "zoom-out"
   ]
 
   function randomElement(items){
@@ -70,8 +64,6 @@ export default function Home() {
           <amp-story-grid-layer template="fill">
             <amp-img  id="image1"
               animate-in="fade-in"
-              animate-in-delay="1s"
-              animate-in-duration="1s"
               src="https://picsum.photos/450/720"
               width={450}
               height={720}
@@ -182,12 +174,12 @@ export default function Home() {
             <h2
               animate-in={randomElement(anims) || "fly-in-bottom"}
               grid-area="lower-third"
-              animate-in-delay="0.4s"
               style={{
                 display:"flex",
                 flexDirection : "column",
                 alignItems : "center",
-                justifyContent : "center"
+                justifyContent : "center",
+
               }}
             >
               Best walk ever!
