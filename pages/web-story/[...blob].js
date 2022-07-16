@@ -37,13 +37,14 @@ export default function Home() {
       </Head>
 
       <amp-story
-        standalone=""
+        standalone
         title="Stories in AMP - Hello World"
         publisher="AMP Project"
         publisher-logo-src="https://amp.dev/favicons/coast-228x228.png"
         poster-portrait-src="https://amp.dev/static/samples/img/story_dog2_portrait.jpg"
         poster-square-src="https://amp.dev/static/samples/img/story_dog2_square.jpg"
         poster-landscape-src="https://amp.dev/static/samples/img/story_dog2_landscape.jpg"
+        style= {{backgroundColor:"#1b1588"}}
       >
         {/* <!-- A story consists of one or more pages. Each page is declared by an `amp-story-page` element. Pages are designed by layering videos, images and text. Here we have a page that uses two layers. One layer filling the available space with an image and one text layer that shows a heading. --> */}
         <amp-story-page id="page-1" style = {style}>
@@ -54,14 +55,12 @@ export default function Home() {
               animate-in-duration="1s"
               src="https://unsplash.it/720/320/?image=10"
               width={720}
-              height={700*9/16}
+              height={700*20/16}
               layout="responsive"
               alt="..."
               style={{
                 position : "absolute", 
-                top:"0", 
-                left:"0",
-                width:"100%",
+                
               }}
             ></amp-img>
           </amp-story-grid-layer>
