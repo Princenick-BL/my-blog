@@ -17,7 +17,7 @@ export default function Home() {
       <Head>
         <title>Example AMP Story in Next.js</title>
         <meta name="viewport" content="width=device-width"/>
-        <meta name="theme-color" content="#1b1588" />
+        <meta name="theme-color" content="#000" />
         <script
           async
           key="amp-story"
@@ -33,11 +33,7 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"></link>
-        <style>
-          {`amp-story{
-              background-color: red;
-          }`}
-        </style>
+       
       </Head>
 
       <amp-story
