@@ -44,7 +44,7 @@ export default function Home() {
         poster-portrait-src="https://amp.dev/static/samples/img/story_dog2_portrait.jpg"
         poster-square-src="https://amp.dev/static/samples/img/story_dog2_square.jpg"
         poster-landscape-src="https://amp.dev/static/samples/img/story_dog2_landscape.jpg"
-        style= {{"background-color":"#1b1588 !important"}}
+        style= {{"background-color":"#1b1588"}}
       >
         {/* <!-- A story consists of one or more pages. Each page is declared by an `amp-story-page` element. Pages are designed by layering videos, images and text. Here we have a page that uses two layers. One layer filling the available space with an image and one text layer that shows a heading. --> */}
         <amp-story-page id="page-1" style = {style}>
