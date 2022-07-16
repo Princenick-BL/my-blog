@@ -9,17 +9,10 @@
     top: 0;
     left: 0;
     .text{
-        background-image: linear-gradient(
-            to right,
-            #462523 0,
-                  #cb9b51 22%, 
-            #f6e27a 45%,
-            #f6f2c0 50%,
-            #f6e27a 55%,
-            #cb9b51 78%,
-            #462523 100%
-            );
+        background-image: linear-gradient(to right, #462523 0, #cb9b51 22%, #cb9b51 45%, #cb9b51 50%, #cfb844 55%, #cb9b51 78%, #462523 100%);
         background-clip: text;
-        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 1rem;
+        font-weight: bold;
     }
 }

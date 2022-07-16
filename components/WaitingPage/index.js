@@ -24,24 +24,27 @@ const WaitingPage = props => {
       <>
         { isLoading ?
             <div className={styles.loading}>
-                <svg  style={{
-                    margin: "auto", 
-                    background: `linear-gradient(
-                        to right,
-                        #462523 0,
-                            #cb9b51 22%, 
-                        #f6e27a 45%,
-                        #f6f2c0 50%,
-                        #f6e27a 55%,
-                        #cb9b51 78%,
-                        #462523 100%
-                        );`, 
-                    display: "block", shapeRendering: "auto"}} width="40px" height="40px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
-                    <circle cx="50" cy="50" fill="none" stroke="var(--color-primary-light)" strokeWidth="10" r="35" strokeDasharray="164.93361431346415 56.97787143782138">
-                    <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;360 50 50" keyTimes="0;1"></animateTransform>
-                    </circle>
-                </svg>
-                <div className={styles.text}>Luxe Story Blog</div>
+                <div>
+                    <svg  style={{
+                        margin: "auto", 
+                        background: `linear-gradient(
+                            to right,
+                            #462523 0,
+                                #cb9b51 22%, 
+                            #f6e27a 45%,
+                            #f6f2c0 50%,
+                            #f6e27a 55%,
+                            #cb9b51 78%,
+                            #462523 100%
+                            );`, 
+                        display: "block", shapeRendering: "auto"}} width="40px" height="40px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                        <circle cx="50" cy="50" fill="none" stroke="var(--color-primary-light)" strokeWidth="10" r="35" strokeDasharray="164.93361431346415 56.97787143782138">
+                        <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;360 50 50" keyTimes="0;1"></animateTransform>
+                        </circle>
+                    </svg>
+                    <br></br>
+                    <div className={styles.text}>Luxe Story Blog</div>
+                </div>
             </div>
         : props.children }
       </>
