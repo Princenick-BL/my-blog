@@ -64,6 +64,35 @@ export default function Home() {
               }}
             ></amp-img>
           </amp-story-grid-layer>
+
+          <amp-story-grid-layer template="vertical">
+            <div
+              animate-in="fly-in-bottom"
+              style = {{
+                height: "max-content",
+                position : "absolute",
+                maxWidth : "100%",
+                maxHeight:"30%",
+                top : "0",
+                // backgroundColor : "#fff",
+                color : "#fff",
+                padding : "1rem",
+                paddingBottom : "60px",
+              }}
+            >
+              <h1
+                style={{
+                  // fontFamily: "Dancing Script, cursive",
+                  fontSize : "1.5rem",
+                  textAlign : "left",
+                  lineHeight : "2",
+                  backgroundImage: "linear-gradient(to right, #462523 0, #cb9b51 22%, #cb9b51 45%, #cb9b51 50%, #cfb844 55%, #cb9b51 78%, #462523 100%)",
+
+                }}
+               >LuxeStoryBlog</h1>
+            </div>
+          </amp-story-grid-layer>
+          
           <amp-story-grid-layer template="vertical">
             <amp-img  id="image1"
               animate-in="fade-in"
