@@ -148,7 +148,7 @@ export default function Home() {
             <amp-img
               src="https://picsum.photos/1024/720"
               animate-in="fly-in-top"
-              width="auto"
+              width="400"
               height="720"
               layout="responsive"
               style={{
