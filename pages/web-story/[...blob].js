@@ -86,11 +86,11 @@ export default function Home() {
             <div
               animate-in="fly-in-bottom"
               style = {{
-                height: "40%",
+                height: "max-content",
                 position : "absolute",
                 maxWidth : "100%",
                 maxHeight:"30%",
-                bottom : "70px",
+                bottom : "0",
                 // backgroundColor : "#fff",
                 color : "#fff",
                 padding : "1rem",
