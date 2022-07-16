@@ -48,19 +48,36 @@ export default function Home() {
       >
         {/* <!-- A story consists of one or more pages. Each page is declared by an `amp-story-page` element. Pages are designed by layering videos, images and text. Here we have a page that uses two layers. One layer filling the available space with an image and one text layer that shows a heading. --> */}
         <amp-story-page id="page-1" style = {style}>
+          <amp-story-grid-layer template="fill">
+            <amp-img  id="image1"
+              animate-in="fade-in"
+              animate-in-delay="1s"
+              animate-in-duration="1s"
+              src="https://picsum.photos/450/720"
+              width={450}
+              height={720}
+              layout="responsive"
+              alt="..."
+              style={{
+                position : "absolute", 
+                left : "0",
+              }}
+            ></amp-img>
+          </amp-story-grid-layer>
           <amp-story-grid-layer template="vertical">
             <amp-img  id="image1"
               animate-in="fade-in"
               animate-in-delay="1s"
               animate-in-duration="1s"
-              src="https://unsplash.it/720/320/?image=10"
-              width={720}
-              height={700*20/16}
+              src={"/img/calc.webp"}
+              width={450}
+              height={720}
               layout="responsive"
               alt="..."
               style={{
                 position : "absolute", 
-                
+                left : "0",
+                bottom : "0"
               }}
             ></amp-img>
           </amp-story-grid-layer>
@@ -74,16 +91,17 @@ export default function Home() {
                 maxWidth : "100%",
                 maxHeight:"30%",
                 bottom : "70px",
-                backgroundColor : "#fff",
+                // backgroundColor : "#fff",
+                color : "#fff",
                 padding : "1rem",
-                paddingBottom : "60px"
+                paddingBottom : "60px",
               }}
             >
               <h1
                 style={{
-                  fontFamily: "Dancing Script, cursive",
+                  // fontFamily: "Dancing Script, cursive",
                   fontSize : "1.5rem",
-                  textAlign : "center",
+                  textAlign : "left",
                   lineHeight : "2"
                 }}
                >FERRARI 812 GTS: LE RETOUR DE LA SPIDER V12</h1>
