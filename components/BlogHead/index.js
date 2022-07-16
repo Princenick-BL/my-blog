@@ -1845,6 +1845,9 @@ export default function BlogHead({poster,publishedAt,description}) {
                 -webkit-text-fill-color: transparent;
 
             }
+            amp-story{
+                background-story : red;
+            }
         `}
         </style>
         <style>{`

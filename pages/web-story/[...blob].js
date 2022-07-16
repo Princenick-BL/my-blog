@@ -33,7 +33,11 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"></link>
-        
+        <style>
+          {`amp-story{
+              background-color: red;
+          }`}
+        </style>
       </Head>
 
       <amp-story
@@ -44,7 +48,7 @@ export default function Home() {
         poster-portrait-src="https://amp.dev/static/samples/img/story_dog2_portrait.jpg"
         poster-square-src="https://amp.dev/static/samples/img/story_dog2_square.jpg"
         poster-landscape-src="https://amp.dev/static/samples/img/story_dog2_landscape.jpg"
-        style= {{"background-color":"#1b1588"}}
+        style= {{"background-color":"#000"}}
       >
         {/* <!-- A story consists of one or more pages. Each page is declared by an `amp-story-page` element. Pages are designed by layering videos, images and text. Here we have a page that uses two layers. One layer filling the available space with an image and one text layer that shows a heading. --> */}
         <amp-story-page id="page-1" style = {style}>
@@ -144,42 +148,30 @@ export default function Home() {
 
         {/* <!-- Here we have a page consisting of a video which autoplays and loops. --> */}
         <amp-story-page id="page-2"  style = {style}>
-          <amp-story-grid-layer template="fill">
-            <amp-video
-              autoplay=""
-              loop=""
-              width="720"
-              height="960"
-              poster="https://amp.dev/static/samples/img/story_video_dog_cover.jpg"
-              layout="responsive"
-            >
-              <source
-                src="https://amp.dev/static/samples/video/story_video_dog.mp4"
-                type="video/mp4"
-              />
-            </amp-video>
-          </amp-story-grid-layer>
           <amp-story-grid-layer template="vertical">
-            <div
-              style = {{
-                height: "40%",
-                position : "absolute",
-                maxWidth : "100%",
-                maxHeight:"60%",
-                bottom : 0,
-                backgroundColor : "#fff",
-                padding : "1rem",
-                paddingBottom : "60px"
+            <amp-img
+              src="https://picsum.photos/1024/720"
+              animate-in="fly-in-top"
+              width="auto"
+              height="720"
+              layout="responsive"
+              style={{
+                position:"absolute",
+                width : "160%",
+                height : "60%",
+
               }}
-            >
-              <h1
-                style={{
-                  fontFamily: "Dancing Script, cursive",
-                  fontSize : "1.5rem"
-                }}
-               >Hello World</h1>
-            </div>
+            />
           </amp-story-grid-layer>
+          <amp-story-grid-layer template="thirds">
+            <h2
+              animate-in="fly-in-bottom"
+              grid-area="lower-third"
+              animate-in-delay="0.4s"
+            >
+              Best walk ever!
+            </h2>
+          </amp-story-grid-layer>            
         
         </amp-story-page>
 
