@@ -84,9 +84,13 @@ export default function Home() {
                 style={{
                   // fontFamily: "Dancing Script, cursive",
                   fontSize : "1.5rem",
-                  textAlign : "left",
+                  textAlign : "center",
                   lineHeight : "2",
                   backgroundImage: "linear-gradient(to right, #462523 0, #cb9b51 22%, #cb9b51 45%, #cb9b51 50%, #cfb844 55%, #cb9b51 78%, #462523 100%)",
+                  "background-clip": "text",
+                  "-webkit-background-clip": "text",
+                  "-webkit-text-fill-color": "transparent",
+                  "font-family": "Dancing Script ,cursive",
 
                 }}
                >LuxeStoryBlog</h1>
