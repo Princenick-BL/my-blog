@@ -20,7 +20,7 @@ import { useRouter } from 'next/router'
 import Script from 'next/script'
 import * as gtag from '../lib/gtag'
 import Link from 'next/link'
-import {useGlobalContext} from './GlobalContext'
+import {useGlobalContext} from '../GlobalContext'
 import {THEME} from '../constants'
 
 export default function Home() {
