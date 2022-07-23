@@ -5,7 +5,7 @@ export const config = { amp: true };
 export default function Home() {
 
   const style = { 
-    borderRadius : "15px ",
+    borderRadius : "15px",
     maxWidth:"calc( 100% - 6px )",
     backgroundColor:"#fff",
     border : "3px solid #f4f4f4f4",

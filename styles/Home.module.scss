@@ -1,4 +1,16 @@
-.container {
+.containerLight {
+  background-color: var(--theme-light);
+  color: var(--theme-text-light);
+  a:hover{
+    color: var(--theme-text-light);
+  }
+}
+.containerDark {
+  background-color: var(--theme-dark);
+  color: var(--theme-text-dark);
+  a:hover{
+    color: var(--theme-text-dark);
+  }
 }
 
 .main {

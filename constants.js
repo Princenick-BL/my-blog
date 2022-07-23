@@ -8,6 +8,11 @@ export const config ={
     //API_ENDPOINT : "/api"
 }
 
+export const THEME = {
+    DARK : "dark-theme",
+    LIGHT : "light-theme"
+}
+
 export const categories = [
     {
         id: 1,

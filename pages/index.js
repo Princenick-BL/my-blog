@@ -20,6 +20,8 @@ import { useRouter } from 'next/router'
 import Script from 'next/script'
 import * as gtag from '../lib/gtag'
 import Link from 'next/link'
+import {useGlobalContext} from './GlobalContext'
+import {THEME} from '../constants'
 
 export default function Home() {
 
@@ -28,6 +30,7 @@ export default function Home() {
   const [stories1,setStories1] =  useState([])
   const [stories2,setStories2] =  useState([])
   const router = useRouter()
+  const {state,dispatch} = useGlobalContext()
 
 
   useEffect(()=>{
@@ -57,6 +60,7 @@ export default function Home() {
     }
   }, [router.events])
 
+
   return (
     <>
         <Head>
@@ -83,7 +87,7 @@ export default function Home() {
             `,
           }}
         />
-        <div className={styles.container}>
+        <div className={ styles.containerLight }>
           <Menu/>
           <StoriesWidget/>
           <main className={styles.main}>

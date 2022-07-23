@@ -57,7 +57,7 @@ export default function BlogHead({poster,publishedAt,description}) {
                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
                 font-variant: tabular-nums;
                 line-height: 2 ;
-                background-color: #fff;
+                background-color: #ccc;
                 font-feature-settings: 'tnum', "tnum";
             }
             article,
