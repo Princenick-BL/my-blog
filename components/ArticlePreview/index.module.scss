@@ -7,8 +7,9 @@
     max-width: 40%;
     margin: 1rem;
     @media (max-width: 500px) {
-        width: 90vw;
-        min-width: 90vw;
+        width: calc(100vw - 1.5rem );
+        min-width: calc(100vw - 1.5rem );
+        margin: .5rem;
     }
     img{
         background-color: #f3f3f3;
