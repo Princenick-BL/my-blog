@@ -16,79 +16,52 @@ export default function Example(props){
 
   return (
 
-      <Carousel 
-        className={styles.container} 
-        animation="slide"
-      > 
-        {categories.map((res,index)=>{
-         
-         
-          return (
-            <div className={styles.box}  key={index}>
-              <h3 className={styles.topic}>Topic</h3>
-              <div className={styles.img}
-              >
-                <Image
-                  src={`/img/${res?.img}`}
-                  width={size.width || res.width}
-                  height={size.height ||res?.height}
-                  onLoad={({ target }) => {
-                      const { naturalWidth, naturalHeight } = target ;
-                      setSize({
-                          width:naturalWidth,
-                          height:naturalHeight
-                      })
-                  }}
-                  layout="responsive"
-                  style={{overflow:"hidden"}}
-                />
-              </div>
-              <div className={styles.info}>
-                <h1 className={styles.cat}>
-                  {res?.name?.toUpperCase()}
-                </h1>
-                <p>
-                  {res?.description}
-                </p>
-                {/* <div className={styles.link}>
-                  Découvrir
-                </div> */}
-              </div>
-            </div>
+    <Carousel 
+      className={styles.container} 
+      animation="slide"
+    > 
+      {categories.map((res,index)=>{
+        
+        return (
 
-            // <div className={styles.boxV2}  key={index}>
-            //   <div className={styles.img}>
-            //     <Image
-            //       src={`/img/${res?.img}`}
-            //       width={size?.width || res.width}
-            //       height={size?.height || res?.height}
-            //       layout="responsive"
-            //       style={{overflow:"hidden"}}
-            //       onLoad={({ target }) => {
-            //         const { naturalWidth, naturalHeight } = target ;
-            //         setSize({
-            //             width:naturalWidth,
-            //             height:naturalHeight
-            //         })
-            //       }}
-            //     />
-            //   </div>
-            //   {/* <div className={styles.info}>
-            //     <h1 className={styles.cat}>
-            //       {res?.name?.toUpperCase()}
-            //     </h1>
-            //     <p>
-            //       {res?.description}
-            //     </p>
-            //     <div className={styles.link}>
-            //       Découvrir
-            //     </div> 
-            //   </div> */}
-            // </div>
-          
-            
-          )
-        })}
-      </Carousel>
+          <div  key={index}>
+            <Link href={`/article/category/${res.name}`}>
+              <a className={styles.box}>
+
+                <h3 className={styles.topic}>Topic</h3>
+                <div className={styles.img} >
+                  <Image
+                    src={`/img/${res?.img}`}
+                    width={size.width || res.width}
+                    height={size.height ||res?.height}
+                    onLoad={({ target }) => {
+                        const { naturalWidth, naturalHeight } = target ;
+                        setSize({
+                            width:naturalWidth,
+                            height:naturalHeight
+                        })
+                    }}
+                    layout="responsive"
+                    style={{overflow:"hidden"}}
+                  />
+                </div>
+                <div className={styles.info}>
+                  <h1 className={styles.cat}>
+                    {res?.name?.toUpperCase()}
+                  </h1>
+                  <p>
+                    {res?.description}
+                  </p>
+                    <div className={styles.link}>
+                      {"Découvrir -->"}
+                    </div>
+                </div>
+                </a>
+            </Link>
+          </div>
+
+        )
+      })}
+    </Carousel>
   )
 }
