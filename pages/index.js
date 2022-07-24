@@ -99,7 +99,9 @@ export default function Home() {
               {/* <br></br>
               <input className={"searchInput"} type={"search"} placeholder='Search ...'/>
               <br></br> */}
-              <h3 className={styles.h3}> <FireOutlined /> &nbsp;  RECENT STORIES</h3>
+              <div className={styles.flex}>
+                <h3 className={styles.h3}> <FireOutlined /> &nbsp;  RECENT STORIES</h3>
+              </div>
               <div className={styles.articleList}>
                 {articles && articles.length >0 ? articles?.map((article,index)=>{
                   return(
