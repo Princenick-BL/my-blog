@@ -37,7 +37,22 @@ export function HomeMenu() {
                                         <a className="ampstart-nav-link">HOME</a>
                                     </Link>
                                 </li>
-                                
+                                <li className="ampstart-nav-item" onClick={(e)=>{setShow(false)}}>
+                                    <Link href={"/"} >
+                                        <a className="ampstart-nav-link">Articles</a>
+                                    </Link>
+                                    <ul> 
+                                        <li><a href="#">Mission</a></li>
+                                        <li><a href="#">History</a></li>
+                                        <li><a href="#">Organization</a></li>
+                                        <li><a href="#">Board</a></li>
+                                    </ul>
+                                </li>
+                                <li className="ampstart-nav-item" onClick={(e)=>{setShow(false)}}>
+                                    <Link href={"/"} >
+                                        <a className="ampstart-nav-link">Web Story</a>
+                                    </Link>
+                                </li>
                                 <li className="ampstart-nav-item" onClick={(e)=>{setShow(false)}}>
                                     <Link href={"/article/category/Cars"} >
                                         <a className="ampstart-nav-link">CARS</a>

@@ -1,20 +1,28 @@
 import React,{useState,useEffect,Suspense}  from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../../../styles/Home.module.scss'
-import ArticlePreview from '../../../components/ArticlePreview'
-import { getStoriesByCat } from '../../../services/stories'
+import styles from '../../styles/Home.module.scss'
+import ArticlePreview from '../../components/ArticlePreview'
+import { getArticleByCat } from '../../services/articles'
 import {
   FireOutlined,
   TabletOutlined
 } from '@ant-design/icons';
-
-import {HomeMenu as Menu} from '../../../components/Menu'
-import Loading from '../../../Loading'
+import { Radio, Select } from 'antd';
+import {HomeMenu as Menu} from '../../components/Menu'
+import Loading from '../../Loading'
 import Script from 'next/script'
-import * as gtag from '../../../lib/gtag'
+import * as gtag from '../../lib/gtag'
+
+
+const { Option } = Select;
+
 
 export default function Category({location,articles,category}) {
+
+    const handleChange = () =>{
+
+    }
 
 
   return (
@@ -50,7 +58,21 @@ export default function Category({location,articles,category}) {
               {/* <br></br>
               <input className={"searchInput"} type={"search"} placeholder='Search ...'/>
               <br></br> */}
-              <h3 className={styles.h3}> <FireOutlined /> &nbsp; {category}</h3>
+              <div className={styles.flex}>
+                <h3 className={styles.h3}> <FireOutlined /> &nbsp; <div>{category}</div></h3>
+                <Select
+                    mode="tags"
+                    size={2}
+                    placeholder="Please select"
+                    defaultValue={['article','web-story']}
+                    onChange={handleChange}
+                    style={{ width: '100%' }}
+                    className={styles.select}
+                >
+                    <Option key={'article'}>{"Article"}</Option>
+                    <Option key={'web-story'}>{"Web Story"}</Option>
+                </Select>
+              </div>
               <div className={styles.articleList}>
                 {articles && articles.length >0 ? articles?.map((article,index)=>{
                   return(
@@ -102,20 +124,20 @@ export async function getServerSideProps(context) {
     // Fetch data from external API
     
     const { req, query, res, asPath, pathname } = context;
-    const {blob}  = query
+    const {category}  = query
     
     if (req) {
       var host = req.headers.referer // will give you localhost:3000
     }
 
-    const result = await getStoriesByCat(blob)
+    const result = await getArticleByCat(category)
 
     if(result?.success){
         return { 
             props: {
                 location : host || "",
                 articles : result?.data,
-                category : blob
+                category : category
             } 
         }
     }

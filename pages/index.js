@@ -22,6 +22,9 @@ import * as gtag from '../lib/gtag'
 import Link from 'next/link'
 import {useGlobalContext} from '../GlobalContext'
 import {THEME} from '../constants'
+import TopicCluster from '../components/TopicCluster'
+
+
 
 export default function Home() {
 
@@ -91,7 +94,8 @@ export default function Home() {
           <Menu/>
           <main className={styles.main}>
             <div className={styles.articles}>
-            <StoriesWidget/>
+              {/* <StoriesWidget/> */}
+              <TopicCluster/>
               {/* <br></br>
               <input className={"searchInput"} type={"search"} placeholder='Search ...'/>
               <br></br> */}
@@ -105,7 +109,7 @@ export default function Home() {
                       img={article?.poster}
                       category={article?.category}
                       title={article?.title}
-                      url={`/article/${article?._id}/${article?.slug}`}
+                      url={`/${article.category.toLowerCase()}/article/${article?._id}/${article?.slug}`}
                       updatedAt = {article?.updatedAt}
                       description = {article?.description}
                     />
@@ -125,7 +129,7 @@ export default function Home() {
                           title={"Consectetur aute non incididunt esse Lorem dolore mollit occaecat elit."}
                           img={storie?.poster || "https://picsum.photos/360/370"}
                           logo={"https://picsum.photos/50/50"}
-                          url={`/web-story/${storie?._id}/${storie?.slug}`}
+                          url={`/${storie.category.toLowerCase()}/web-story/${storie?._id}/${storie?.slug}`}
                           category={storie?.category}
                         />
                       </div>

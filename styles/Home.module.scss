@@ -16,6 +16,7 @@
   }
 }
 
+
 .main {
   min-height: 100vh;
   flex: 1;
@@ -24,34 +25,33 @@
   align-items: center;
   max-width: 700px;
   margin: 0 auto;
-  .h3{
-    margin: .5rem;
-    //background: -webkit-linear-gradient(97deg, var(--color1) 20%, var(--color2) 70%, var(--color3) 100%);
-    background-image: linear-gradient(to right, #462523 0, #cb9b51 22%, #cb9b51 45%, #cb9b51 50%, #cfb844 55%, #cb9b51 78%, #462523 100%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 1rem;
-    font-weight: bold;
-    font: bold  Inconsolata,verdana,sans-serif;
-    color: #021425;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+  .flex{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    
-    svg{
-      fill: linear-gradient(
-        to right,
-        #462523 0,
-              #cb9b51 22%, 
-        #f6e27a 45%,
-        #f6f2c0 50%,
-        #f6e27a 55%,
-        #cb9b51 78%,
-        #462523 100%
-        );
+    h3{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: .5rem;
+      //background: -webkit-linear-gradient(97deg, var(--color1) 20%, var(--color2) 70%, var(--color3) 100%);
+      background-image: linear-gradient(to right, #462523 0, #cb9b51 22%, #cb9b51 45%, #cb9b51 50%, #cfb844 55%, #cb9b51 78%, #462523 100%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 1rem;
+      font-weight: bold;
+      font: bold  Inconsolata,verdana,sans-serif;
+      color: #021425;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      
+      svg{
+        fill: #cb9b51, 
+      }
     }
-  
+    .select{
+      max-width: max-content;
+    }
   }
   .articles{
     width: 100%;

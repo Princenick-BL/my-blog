@@ -1,32 +1,32 @@
 import React,{useState,useEffect,Suspense}  from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../../styles/Home.module.scss'
-import ArticlePreview from '../../components/ArticlePreview'
-import { getStories } from '../../services/stories'
+import styles from '../../../styles/Home.module.scss'
+import { getStoriesByCat } from '../../../services/stories'
 import {
   FireOutlined,
   TabletOutlined
 } from '@ant-design/icons';
-import BlogHead from '../../components/BlogHead'
-import {ArticleHeader} from '../../components/Header'
-import {HomeMenu as Menu} from '../../components/Menu'
-import Loading from '../../Loading'
-import PlayerWidget from '../../components/PlayerWidget'
+import BlogHead from '../../../components/BlogHead'
+import {ArticleHeader} from '../../../components/Header'
+import {HomeMenu as Menu} from '../../../components/Menu'
+import Loading from '../../../Loading'
+import PlayerWidget from '../../../components/PlayerWidget'
 import { useRouter } from 'next/router'
 import Script from 'next/script'
-import * as gtag from '../../lib/gtag'
+import * as gtag from '../../../lib/gtag'
 import Link from 'next/link'
 
-export default function Articles() {
+export default function WebStories({category}) {
 
   const [articles,setArticles] =  useState([])
   const router = useRouter()
+  const cat = category.charAt(0).toUpperCase()+category.substring(1)
 
 
   useEffect(()=>{
     (async ()=>{
-      const res = await getStories()
+      const res = await getStoriesByCat(cat)
       setArticles(res.data)
     })();
   },[])
@@ -87,7 +87,7 @@ export default function Articles() {
                           title={"Consectetur aute non incididunt esse Lorem dolore mollit occaecat elit."}
                           img={article?.poster || "https://picsum.photos/360/370"}
                           logo={"https://picsum.photos/50/50"}
-                          url={`/web-story/${article?._id}/${article?.slug}`}
+                          url={`/${category}/web-story/${article?._id}/${article?.slug}`}
                           category={article?.category}
                         />
                       </div>
@@ -119,4 +119,19 @@ export default function Articles() {
         </div>
     </>
   )
+}
+
+export async function getServerSideProps(context) {
+  // Fetch data from external API
+  
+  const { req, query, res, asPath, pathname } = context;
+  const {category}  = query
+
+  // Pass data to the page via props
+
+  return { 
+      props: {
+        category : category
+      } 
+  }
 }

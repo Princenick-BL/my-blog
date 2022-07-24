@@ -1,32 +1,34 @@
 import React,{useState,useEffect,Suspense}  from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../../styles/Home.module.scss'
-import ArticlePreview from '../../components/ArticlePreview'
-import { getArticle } from '../../services/articles'
+import styles from '../../../styles/Home.module.scss'
+import ArticlePreview from '../../../components/ArticlePreview'
+import { getArticleByCat } from '../../../services/articles'
 import {
   FireOutlined,
   TabletOutlined
 } from '@ant-design/icons';
-import BlogHead from '../../components/BlogHead'
-import {ArticleHeader} from '../../components/Header'
-import {HomeMenu as Menu} from '../../components/Menu'
-import Loading from '../../Loading'
-import StoriesWidget from '../../components/StoriesWidget'
+import BlogHead from '../../../components/BlogHead'
+import {ArticleHeader} from '../../../components/Header'
+import {HomeMenu as Menu} from '../../../components/Menu'
+import Loading from '../../../Loading'
+import StoriesWidget from '../../../components/StoriesWidget'
 import { useRouter } from 'next/router'
 import Script from 'next/script'
-import * as gtag from '../../lib/gtag'
+import * as gtag from '../../../lib/gtag'
 import Link from 'next/link'
 
-export default function Articles() {
+export default function Articles({category}) {
+
 
   const [articles,setArticles] =  useState([])
   const router = useRouter()
 
+  const cat = category.charAt(0).toUpperCase()+category.substring(1)
 
   useEffect(()=>{
     (async ()=>{
-      const res = await getArticle()
+      const res = await getArticleByCat(cat)
       setArticles(res.data)
     })();
   },[])
@@ -86,7 +88,7 @@ export default function Articles() {
                       img={article?.poster}
                       category={article?.category}
                       title={article?.title}
-                      url={`/article/${article?._id}/${article?.slug}`}
+                      url={`/${category}/article/${article?._id}/${article?.slug}`}
                       updatedAt = {article?.updatedAt}
                       description = {article?.description}
                     />
@@ -118,4 +120,18 @@ export default function Articles() {
         </div>
     </>
   )
+}
+export async function getServerSideProps(context) {
+  // Fetch data from external API
+  
+  const { req, query, res, asPath, pathname } = context;
+  const {category}  = query
+
+  // Pass data to the page via props
+
+  return { 
+      props: {
+        category : category
+      } 
+  }
 }

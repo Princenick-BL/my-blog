@@ -18,7 +18,7 @@ const GlobalReducer = (state,action) =>{
 
 function GlobalProvider({children}){
     const hour = new Date().getHours();
-    console.log(hour,hour > 19 || hour < 4)
+
     const defaultvalue ={
         theme : (hour > 19 || hour < 4 )?  THEME.DARK : THEME.LIGHT
     }

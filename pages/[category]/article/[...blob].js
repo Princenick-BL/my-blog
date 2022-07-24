@@ -1,13 +1,12 @@
 import React,{Fragment,useEffect,useState} from 'react'
 import Head from 'next/head'
 import styles from './index.module.scss'
-import PlayerWidget from '../../components/PlayerWidget'
-import { ArticleHeader } from '../../components/Header'
-import Menu from '../../components/Menu'
-import BlogHead from '../../components/BlogHead'
-import { getSection } from '../../utils/article.utils'
+import { ArticleHeader } from '../../../components/Header'
+import Menu from '../../../components/Menu'
+import BlogHead from '../../../components/BlogHead'
+import { getSection } from '../../../utils/article.utils'
 import axios from 'axios'
-import { config as endpoint } from '../../constants'
+import { config as endpoint } from '../../../constants'
 
 export const config = { amp: true };
 
@@ -91,6 +90,7 @@ export async function getServerSideProps(context) {
     const { req, query, res, asPath, pathname } = context;
     const {blob}  = query
     const articleId = blob[0]
+
 
     if (req) {
       var host = req.headers.referer // will give you localhost:3000
