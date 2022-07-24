@@ -36,12 +36,11 @@ export default function Article({location,article}) {
                     <article className="recipe-article">
                         <header>
                             <span className="ampstart-subtitle block px3 pt2 mb2">{article?.category}</span>
-                            <h1 className="mb1 px3 fsh1">{article?.title}</h1>
-                            <br></br>
-                            <address className="ampstart-byline clearfix mb4 px3 h5">
+                            <h1 className="mb2 px3 fsh1">{article?.title}</h1>
+                            <address className="ampstart-byline clearfix mb1 px3 h5">
                                 <time
                                     style={{overflow :"hidden",fontSize:"1rem"}}
-                                    className="ampstart-byline-pubdate block bold my1"
+                                    className="ampstart-byline-pubdate block bold mb2"
                                     dateTime="2016-12-13"
                                 >{`Updated at : ${new Date(article?.updatedAt).toLocaleDateString()}`}</time>
                             </address>

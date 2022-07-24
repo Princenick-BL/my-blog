@@ -25,11 +25,20 @@ export default function Example(props){
          
           return (
             <div className={styles.box}  key={index}>
-              <div className={styles.img}>
+              <h3 className={styles.topic}>Topic</h3>
+              <div className={styles.img}
+              >
                 <Image
                   src={`/img/${res?.img}`}
-                  width={res.width}
-                  height={res?.height}
+                  width={size.width || res.width}
+                  height={size.height ||res?.height}
+                  onLoad={({ target }) => {
+                      const { naturalWidth, naturalHeight } = target ;
+                      setSize({
+                          width:naturalWidth,
+                          height:naturalHeight
+                      })
+                  }}
                   layout="responsive"
                   style={{overflow:"hidden"}}
                 />

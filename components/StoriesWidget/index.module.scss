@@ -2,7 +2,6 @@
     max-height: max-content;
     //overflow-x: scroll;
     max-width: 700px;
-    padding-top: 70px;
     margin: 0px auto;
     margin-bottom: 0;
     button{
@@ -19,8 +18,20 @@
         border-radius: 15px;
         box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(243, 243, 243, 0.9529411765) 0px 0px 0px 1px;
         max-height: 170px;
+        position: relative;
+        .topic{
+            position: absolute;
+            right: 1rem;
+            top: .5rem;
+            font-style: italic;
+            font-size: 1rem;
+            background-image: linear-gradient(to right, #462523 0, #cb9b51 22%, #cb9b51 45%, #cb9b51 50%, #cfb844 55%, #cb9b51 78%, #462523 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
         .img{
             width: 40vw;
+            max-width: 150px;
             max-height: 150px;
             margin: .5rem;
             border-radius: 10px;
@@ -30,16 +41,19 @@
         }
 
         .info{
-            width: 60vw;
-            max-width: 300px;
+            width: 90%;
+            max-width: 450px;
+            @media (max-width: 500px) {
+                width: 60vw;
+                max-width: 300px;
+            }
             bottom: auto;
             left: auto;
             transform: none;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            margin: .5rem;
-            margin-left: 0px;
+            margin: .5rem auto;
             font-family: Montserrat, arial, sans-serif;
             .cat{
                 line-height: 1.11111;

@@ -1142,7 +1142,7 @@ export default function BlogHead({poster,publishedAt,description}) {
             }
             .ampstart-title-lg {
                 font-size: 3rem;
-                line-height: 3.5rem;
+                line-height: 2rem;
                 letter-spacing: 0.06rem;
             }
             .ampstart-title-md {
@@ -1189,7 +1189,7 @@ export default function BlogHead({poster,publishedAt,description}) {
             .h1,
             h1 {
                 font-size: 3rem;
-                line-height: 3.5rem;
+                line-height: 2rem;
             }
             .h2,
             h2 {

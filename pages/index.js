@@ -89,9 +89,9 @@ export default function Home() {
         />
         <div className={ styles.containerLight }>
           <Menu/>
-          <StoriesWidget/>
           <main className={styles.main}>
             <div className={styles.articles}>
+            <StoriesWidget/>
               {/* <br></br>
               <input className={"searchInput"} type={"search"} placeholder='Search ...'/>
               <br></br> */}
